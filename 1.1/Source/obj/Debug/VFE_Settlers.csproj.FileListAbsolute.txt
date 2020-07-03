@@ -1,0 +1,19 @@
+C:\Users\rikar\OneDrive\Skrivbord\GIT\Vanilla Factions Expanded - Settlers\1.0\Assemblies\VFE_Settlers.dll
+C:\Users\rikar\OneDrive\Skrivbord\GIT\Vanilla Factions Expanded - Settlers\Source\obj\Debug\VFE_Settlers.csproj.CopyComplete
+C:\Users\rikar\OneDrive\Skrivbord\GIT\Vanilla Factions Expanded - Settlers\Source\obj\Debug\VFE_Settlers.dll
+C:\Users\Rikard Stranne\Documents\GIT\Vanilla-Factions-Expanded---Settlers\1.0\Assemblies\VFE_Settlers.dll
+C:\Users\Rikard Stranne\Documents\GIT\Vanilla-Factions-Expanded---Settlers\Source\obj\Debug\VFE_Settlers.csproj.CopyComplete
+C:\Users\Rikard Stranne\Documents\GIT\Vanilla-Factions-Expanded---Settlers\Source\obj\Debug\VFE_Settlers.dll
+C:\Users\Rikard Stranne\Documents\GIT\Vanilla-Factions-Expanded---Settlers\Source\obj\Debug\VFE_Settlers.csprojAssemblyReference.cache
+C:\Users\rikar\Desktop\GIT\Vanilla Factions Expanded - Settlers\1.0\Assemblies\VFE_Settlers.dll
+C:\Users\rikar\Desktop\GIT\Vanilla Factions Expanded - Settlers\1.1\Assemblies\VFE_Settlers.dll
+C:\Users\rikar\Desktop\GIT\Vanilla Factions Expanded - Settlers\Source\obj\Debug\VFE_Settlers.dll
+C:\Users\rikar\Desktop\GIT\Vanilla Factions Expanded - Settlers\Source\obj\Debug\VFE_Settlers.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\1.1\Assemblies\VFE_Settlers.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\Source\obj\Debug\VFE_Settlers.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\Source\obj\Debug\VFE_Settlers.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaFactionsExpandedSettlers\1.1\Assemblies\VFE_Settlers.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaFactionsExpandedSettlers\Source\obj\Debug\VFE_Settlers.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaFactionsExpandedSettlers\Source\obj\Debug\VFE_Settlers.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded-Settlers\1.1\Source\obj\Debug\VFE_Settlers.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded-Settlers\1.1\Assemblies\VFE_Settlers.dll
