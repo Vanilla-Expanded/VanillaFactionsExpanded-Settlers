@@ -7,10 +7,12 @@ namespace VFE_Settlers.Settings {
         #region Fields
         private static readonly int minReward = 20;
         private static readonly int maxReward = 200;
+        private static readonly bool chemsined = true;
         #endregion Fields
         #region Properties
         public int MinReward = minReward;
         public int MaxReward = maxReward;
+        public bool Chemsined = chemsined;
         #endregion Properties
 
         #region Methods
@@ -18,10 +20,12 @@ namespace VFE_Settlers.Settings {
             base.ExposeData();
             Scribe_Values.Look(ref MinReward, "MinReward", minReward);
             Scribe_Values.Look(ref MaxReward, "MaxReward", maxReward);
+            Scribe_Values.Look(ref Chemsined, "Chemsined", chemsined);
         }
         internal void Reset() {
             MinReward = minReward;
             MaxReward = maxReward;
+            Chemsined = chemsined;
         }
         #endregion Methods
     }
@@ -60,6 +64,7 @@ namespace VFE_Settlers.Settings {
                 settings.MinReward = (int)Mathf.Round(list.Slider(settings.MinReward, 10, 100));
                 list.Label("MaxReward".Translate(settings.MaxReward * 100));
                 settings.MaxReward = (int)Mathf.Round(list.Slider(settings.MaxReward, settings.MinReward, 250));
+                list.CheckboxLabeled("Chemsined".Translate(settings.Chemsined), ref settings.Chemsined);
 
                 list.End();
                 Widgets.EndScrollView();

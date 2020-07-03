@@ -14,6 +14,7 @@
 	<DefaultSettings>Default Settings</DefaultSettings>
 	<MinReward>Minimum reward for bounties: {0}</MinReward>
 	<MaxReward>Maximum reward for bounties: {0}</MaxReward>
+	<Chemsined>Should chemsined muffalo go for your chemsine: {0}</Chemsined>
 	<ProtectionFeeLabel>Protection fee</ProtectionFeeLabel>
 	<ProtectionFeeDialogue>A band of thugs sent by {0} call you from nearby. \n\n They offer to keep your colony safe from any threats, even the ones potentially caused by them, as long as you pay a fee of {1} silver. \n\n Be warned - refusal can anger the thugs. </ProtectionFeeDialogue>
 	<ProtectionFeeAgree>Accept the offer and pay</ProtectionFeeAgree>

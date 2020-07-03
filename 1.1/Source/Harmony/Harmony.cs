@@ -36,7 +36,7 @@ namespace VFE_Settlers.Utilities {
                     return true;
                 }
                 Thing thing = GenClosest.ClosestThing_Global_Reachable(__instance.Position, __instance.Map, __instance.Map.listerThings.ThingsOfDef(Defs.ThingDefOf.Chemshine), PathEndMode.OnCell, TraverseParms.For(__instance), 20f, validator);
-                if (thing != null) {
+                if (thing != null && Settings.SettingsHelper.LatestVersion.Chemsined) {
                     Job job = new Job(JobDefOf.Ingest, thing, __instance.Position);
                     __instance.jobs.TryTakeOrderedJob(job);
                 }
