@@ -163,7 +163,7 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="VFECore.StorytellerDefExtension">
+			<li Class="VanillaStorytellersExpanded.StorytellerDefExtension">
 				<allowedTechLevels>Animal~Ultra</allowedTechLevels>
 			</li>
 		</modExtensions>

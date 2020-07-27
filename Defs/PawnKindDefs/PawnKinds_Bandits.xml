@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<PawnKindDef ParentName="OutlanderBase">
 		<defName>Bandit</defName>
@@ -126,22 +126,28 @@
 	<PawnKindDef ParentName="OutlanderBase">
 		<defName>BanditLeader</defName>
 		<label>bandit leader</label>
+		<labelPlural>bandit leaders</labelPlural>
 		<combatPower>75</combatPower>
-		<defaultFactionType>SettlerSavage</defaultFactionType>
 		<factionLeader>true</factionLeader>
 		<minGenerationAge>30</minGenerationAge>
 		<isFighter>false</isFighter>
 		<gearHealthRange>1~1</gearHealthRange>
 		<itemQuality>Good</itemQuality>
-    <weaponMoney>200~600</weaponMoney>
+		<weaponMoney>200~600</weaponMoney>
 		<weaponTags>
 			<li>Revolver</li>
 		</weaponTags>
-    <apparelMoney>700~1200</apparelMoney>
+		<apparelMoney>700~1200</apparelMoney>
 		<apparelTags>
-			<li>Outlander</li>
 			<li>IndustrialMilitaryBasic</li>
+			<li>BeltDefensePop</li>
 		</apparelTags>
-		<apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
-	</PawnKindDef>	
+		<techHediffsChance>0.15</techHediffsChance>
+		<techHediffsMoney>600~1500</techHediffsMoney>
+		<techHediffsTags>
+			<li>Simple</li>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+	</PawnKindDef>
 </Defs>
