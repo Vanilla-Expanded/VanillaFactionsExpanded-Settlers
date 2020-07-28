@@ -16,6 +16,7 @@
 			<li>Fabric</li>
 			<li>Leathery</li>
 		</stuffCategories>
+       <generateCommonality>0.2</generateCommonality>
 		<thingCategories>
 			<li>Apparel</li>
 		</thingCategories>
@@ -40,7 +41,6 @@
 				<li>Middle</li>
 			</layers>
 			<tags>
-				<li>IndustrialBasic</li>
 				<li>Outlander</li>
 			</tags>
 			<defaultOutfitTags>
@@ -79,11 +79,13 @@
 			<EquipDelay>1.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
-			<SocialImpact>0.10</SocialImpact>
+			<SocialImpact>0.20</SocialImpact>
 		</equippedStatOffsets>
 		<apparel>
 			<bodyPartGroups>
 				<li>Torso</li>
+                <li>Legs</li>
+				<li>Shoulders</li>
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Apparel/GreatDress/GreatDress</wornGraphicPath>
 			<layers>

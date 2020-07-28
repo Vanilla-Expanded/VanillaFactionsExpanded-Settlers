@@ -86,7 +86,7 @@
             <EquipDelay>0.8</EquipDelay>
         </statBases>
         <equippedStatOffsets>
-            <SocialImpact>0.05</SocialImpact>
+            <ShootingAccuracy>0.15</ShootingAccuracy>
         </equippedStatOffsets>
         <apparel>
             <bodyPartGroups>
