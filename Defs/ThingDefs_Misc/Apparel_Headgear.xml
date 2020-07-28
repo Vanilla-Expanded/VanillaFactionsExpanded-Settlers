@@ -86,7 +86,7 @@
             <EquipDelay>0.8</EquipDelay>
         </statBases>
         <equippedStatOffsets>
-            <ShootingAccuracy>0.15</ShootingAccuracy>
+            <ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
         </equippedStatOffsets>
         <apparel>
             <bodyPartGroups>
