@@ -76,6 +76,7 @@
     <Compile Include="JobDrivers\JobDriver_TakeChemshineOutOfChemshineBarrel.cs" />
     <Compile Include="JobGivers\JobGiver_Chemshined.cs" />
     <Compile Include="JobDrivers\JobDriver_PlayFiveFingerFillet.cs" />
+    <Compile Include="MapComponent_LeaderFixOnOngoingSave.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\ModSettings.cs" />
     <Compile Include="SitePartWorkers\SitePartWorker_SpawnWanted.cs" />

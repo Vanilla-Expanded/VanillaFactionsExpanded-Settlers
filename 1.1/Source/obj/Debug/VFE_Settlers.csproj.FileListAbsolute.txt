@@ -17,4 +17,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaFactionsExpan
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\VanillaFactionsExpandedSettlers\Source\obj\Debug\VFE_Settlers.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded-Settlers\1.1\Source\obj\Debug\VFE_Settlers.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded-Settlers\1.1\Assemblies\VFE_Settlers.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded-Settlers\1.1\Source\obj\Debug\VFE_Settlers.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded-Settlers\1.1\Source\obj\Debug\VFE_Settlers.csproj.CoreCompileInputs.cache
