@@ -43,7 +43,7 @@ namespace VFE_Settlers.Settings {
             SettingsHelper.LatestVersion = settings;
         }
         public override string SettingsCategory() {
-            return "Settlers";
+            return "Vanilla Faction Expanded - Settlers";
         }
         public static Vector2 scrollPosition = Vector2.zero;
 
