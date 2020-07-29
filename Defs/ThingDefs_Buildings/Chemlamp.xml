@@ -33,6 +33,7 @@
 		<selectable>true</selectable>
 		<costList>
 			<Steel>20</Steel>
+			<Chemfuel>10</Chemfuel>
 		</costList>
 		<building>
 			<isEdifice>false</isEdifice>    
