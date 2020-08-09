@@ -89,11 +89,13 @@
 			</bodyPartGroups>
 			<wornGraphicPath>Things/Apparel/GreatDress/GreatDress</wornGraphicPath>
 			<layers>
-				<li>Middle</li>
+				<li>OnSkin</li>
 			</layers>
 			<tags>
 				<li>Outlander</li>
+				<li>IndustrialAdvanced</li>
 			</tags>
+		<gender>Female</gender>
 		</apparel>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
 	</ThingDef>
