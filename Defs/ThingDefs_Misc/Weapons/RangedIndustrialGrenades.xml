@@ -19,8 +19,8 @@
 			<WorkToMake>12000</WorkToMake>
 		</statBases>
 		<costList>
-			<Steel>20</Steel>
-			<Chemfuel>80</Chemfuel>
+			<Cloth>20</Cloth>
+			<Chemfuel>140</Chemfuel>
 		</costList>
 		<weaponTags>
 			<li>GrenadeDestructive</li>
