@@ -66,7 +66,7 @@
           <li>Cut</li>
         </capacities>
         <power>15</power>
-        <cooldownTime>2</cooldownTime>
+        <cooldownTime>2.6</cooldownTime>
       </li>
     </tools>
   </ThingDef>
