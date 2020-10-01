@@ -6,6 +6,7 @@ using RimWorld.Planet;
 using UnityEngine;
 using VFE_Settlers.Comps;
 using VFE_Settlers.Hediffs;
+using System;
 
 namespace VFE_Settlers.Utilities
 {
@@ -19,9 +20,12 @@ namespace VFE_Settlers.Utilities
         }
         public static bool ProtectionFee(Map map, IncidentParms parms)
         {
-            int fee = Rand.RangeInclusive(Settings.SettingsHelper.LatestVersion.MinReward, Settings.SettingsHelper.LatestVersion.MaxReward);
+            // int fee = Rand.RangeInclusive(Settings.SettingsHelper.LatestVersion.MinReward, Settings.SettingsHelper.LatestVersion.MaxReward);
             IEnumerable<Thing> silver = UtilityThing.GetSilverInHome(map);
             int count = UtilityThing.GetAmountSilverInHome(silver);
+
+            int fee = (int) Mathf.Clamp(map.wealthWatcher.WealthTotal / 100, 50, 25000);
+
             if (parms.faction == null)
             {
                 parms.faction = Find.FactionManager.RandomEnemyFaction(false, false, false);
