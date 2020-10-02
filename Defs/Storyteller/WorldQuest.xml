@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <IncidentDef>
+  <!--<IncidentDef>
     <defName>Settlers_CaravanRaid</defName>
     <label>raid caravan</label>
     <category>GiveQuest</category>
@@ -10,5 +10,5 @@
     <workerClass>VFE_Settlers.Workers.IncidentWorker_CaravanRaid</workerClass>
 		<baseChance>0.5</baseChance>
 		<minRefireDays>15</minRefireDays>
-  </IncidentDef>
+  </IncidentDef>-->
 </Defs>

@@ -38,20 +38,19 @@ namespace VFE_Settlers.GenSteps
             {
                 faction = map.ParentFaction;
             }
+
             ResolveParams resolveParamsPawn = default;
             resolveParamsPawn.rect = rectToDefend;
             resolveParamsPawn.faction = faction;
-            TraverseParms traverseParms = TraverseParms.For(TraverseMode.PassDoors, Danger.Deadly, false);
             resolveParamsPawn.singlePawnLord = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rectToDefend.CenterCell), map, null);
             resolveParamsPawn.pawnGroupKindDef = faction.def.pawnGroupMakers.FirstOrDefault(x => x.kindDef.defName == "Trader").kindDef ?? PawnGroupKindDefOf.Trader;
             resolveParamsPawn.pawnGroupMakerParams = new PawnGroupMakerParms();
             resolveParamsPawn.pawnGroupMakerParams.tile = map.Tile;
             resolveParamsPawn.pawnGroupMakerParams.faction = faction;
-            PawnGroupMakerParms parm = resolveParamsPawn.pawnGroupMakerParams;
-            float? settlementPawnGroupPoints = resolveParamsPawn.settlementPawnGroupPoints;
-            parm.points = ((!settlementPawnGroupPoints.HasValue) ? SymbolResolver_Settlement.DefaultPawnsPoints.RandomInRange : settlementPawnGroupPoints.Value);
             resolveParamsPawn.pawnGroupMakerParams.inhabitants = true;
             resolveParamsPawn.pawnGroupMakerParams.seed = resolveParamsPawn.settlementPawnGroupSeed;
+            resolveParamsPawn.pawnGroupMakerParams.points = Current.Game.RandomPlayerHomeMap is Map map1 ? (map1.wealthWatcher.WealthTotal * 2) / 100 : parms.sitePart.parms.threatPoints;
+
             BaseGen.symbolStack.Push("pawnGroup", resolveParamsPawn);
             BaseGen.globalSettings.map = map;
             BaseGen.Generate();

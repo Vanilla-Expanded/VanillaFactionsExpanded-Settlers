@@ -24,7 +24,7 @@ namespace VFE_Settlers.Utilities
             IEnumerable<Thing> silver = UtilityThing.GetSilverInHome(map);
             int count = UtilityThing.GetAmountSilverInHome(silver);
 
-            int fee = (int) Mathf.Clamp(map.wealthWatcher.WealthTotal / 100, 50, 25000);
+            int fee = (int) Mathf.Clamp(map.wealthWatcher.WealthTotal / 100, 50, 50000);
 
             if (parms.faction == null)
             {

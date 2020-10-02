@@ -9,7 +9,7 @@
     <statBases>
       <MaxHitPoints>40</MaxHitPoints>
       <WorkToBuild>500</WorkToBuild>
-      <DoorOpenSpeed>2</DoorOpenSpeed>
+      <DoorOpenSpeed>1.8</DoorOpenSpeed>
     </statBases>
     <blockLight>false</blockLight>
     <holdsRoof>false</holdsRoof>
