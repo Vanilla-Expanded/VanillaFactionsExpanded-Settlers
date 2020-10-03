@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <Operation Class="PatchOperationFindMod">
+  <!--<Operation Class="PatchOperationFindMod">
     <mods>
       <li>Vanilla Weapons Expanded</li>
     </mods>
@@ -9,7 +9,7 @@
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="VWE_Tool_Whip"]</xpath>
           <value>
-            <weaponTags>
+            <weaponTags Inherit="False">
               <li>VFES_Whip</li>
             </weaponTags>
           </value>
@@ -22,5 +22,5 @@
         </li>
       </operations>
     </match>
-  </Operation>
+  </Operation>-->
 </Patch>
