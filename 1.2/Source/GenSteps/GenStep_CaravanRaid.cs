@@ -49,11 +49,11 @@ namespace VFE_Settlers.GenSteps
             resolveParamsPawn.pawnGroupMakerParams.faction = faction;
             resolveParamsPawn.pawnGroupMakerParams.inhabitants = true;
             resolveParamsPawn.pawnGroupMakerParams.seed = resolveParamsPawn.settlementPawnGroupSeed;
-            resolveParamsPawn.pawnGroupMakerParams.points = Current.Game.RandomPlayerHomeMap is Map map1 ? (map1.wealthWatcher.WealthTotal * 2) / 100 : parms.sitePart.parms.threatPoints;
-
+            resolveParamsPawn.pawnGroupMakerParams.points = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.RandomPlayerHomeMap).points / 2;
             BaseGen.symbolStack.Push("pawnGroup", resolveParamsPawn);
             BaseGen.globalSettings.map = map;
             BaseGen.Generate();
+
             MapGenerator.rootsToUnfog.Add(loc);
         }
     }
