@@ -10,6 +10,7 @@
       <xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
 
       <value>
+        <li>SettlerCivil</li>
         <li>VFES_PlayerSettlement</li>
       </value>
     </match>

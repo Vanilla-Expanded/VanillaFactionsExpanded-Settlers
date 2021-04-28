@@ -67,8 +67,8 @@
 			<li>(0.25, 0.14, 0.54)</li>
 			<li>(0.23, 0.18, 0.40)</li>
 		</colorSpectrum>
-		<startingGoodwill>20</startingGoodwill>
-		<naturalColonyGoodwill>-20~20</naturalColonyGoodwill>
+    <startingGoodwill>0</startingGoodwill>
+    <naturalColonyGoodwill>-50~50</naturalColonyGoodwill>
 		<pawnGroupMakers>
 			<li>
 				<!-- Normal fights, standard mix -->
@@ -127,14 +127,8 @@
 			<li>(0.88, 0.43, 0.23)</li>
 			<li>(0.69, 0.33, 0.18)</li>
 		</colorSpectrum>
-		<startingGoodwill>
-			<min>-30</min>
-			<max>-30</max>
-		</startingGoodwill>
-		<naturalColonyGoodwill>
-			<min>-100</min>
-			<max>-80</max>
-		</naturalColonyGoodwill>
+    <startingGoodwill>-80</startingGoodwill>
+    <naturalColonyGoodwill>-100~-80</naturalColonyGoodwill>
 		<pawnGroupMakers>
 			<li>
 				<!-- Normal fights, standard mix -->
