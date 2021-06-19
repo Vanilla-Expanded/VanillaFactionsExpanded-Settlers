@@ -95,5 +95,6 @@
     </amount>
     <result>Chemshine</result>
     <yield>25</yield>
+    <singleTimeIfNotQualityIncreasing>5</singleTimeIfNotQualityIncreasing>
   </ItemProcessor.CombinationDef>
 </Defs>
