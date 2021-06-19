@@ -20,10 +20,8 @@ namespace VFE_Settlers.SitePartWorkers
 			slate.Set<string>("bounty", (wanted.Reward * 10).ToString());
 			slate.Set<string>("nickname", name.Nick);
 
-			Log.Message("HELLO2");
 			part.things = new ThingOwner<Pawn>(part, oneStackOnly: true);
 			part.things.TryAdd(pawn);
-			Log.Message("HELLO3");
 			PawnRelationUtility.Notify_PawnsSeenByPlayer(Gen.YieldSingle(pawn), out _, informEvenIfSeenBefore: true, writeSeenPawnsNames: false);
 		}
 	}

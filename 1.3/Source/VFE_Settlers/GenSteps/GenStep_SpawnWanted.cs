@@ -19,7 +19,6 @@ namespace VFE_Settlers.GenSteps
         }
         protected override bool CanScatterAt(IntVec3 c, Map map)
         {
-            Log.Message("INSIDE");
             if (!base.CanScatterAt(c, map))
             {
                 return false;
@@ -28,7 +27,6 @@ namespace VFE_Settlers.GenSteps
             {
                 return false;
             }
-            Log.Message("SUCCESS");
             return true;
         }
 
@@ -38,7 +36,7 @@ namespace VFE_Settlers.GenSteps
             CellRect cellRect = CellRect.CenteredOn(loc, 8, 8).ClipInsideMap(map);
             Pawn singlePawnToSpawn = (Pawn)parms.sitePart.things.Take(parms.sitePart.things[0]);
 
-            ResolveParams resolveParams2 = default(ResolveParams);
+            ResolveParams resolveParams2 = default;
             resolveParams2.rect = cellRect;
             resolveParams2.faction = faction;
             resolveParams2.singlePawnToSpawn = singlePawnToSpawn;
@@ -46,6 +44,7 @@ namespace VFE_Settlers.GenSteps
             {
                 MapGenerator.rootsToUnfog.Add(x.Position);
             };
+
             BaseGen.globalSettings.map = map;
             BaseGen.symbolStack.Push("pawn", resolveParams2);
             BaseGen.Generate();
