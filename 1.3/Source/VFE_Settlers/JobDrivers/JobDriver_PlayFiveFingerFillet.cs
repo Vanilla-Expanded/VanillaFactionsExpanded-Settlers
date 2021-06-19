@@ -21,7 +21,7 @@ namespace VFE_Settlers.JobGivers
 					BodyPartRecord bodyPartRecord = (from x in pawn.health.hediffSet.GetNotMissingParts(BodyPartHeight.Undefined, BodyPartDepth.Outside, BodyPartTagDefOf.ManipulationLimbDigit, null)
 													 where !x.def.conceptual
 													 select x).RandomElement<BodyPartRecord>();
-					this.pawn.TakeDamage(new DamageInfo(DamageDefOf.Cut, 1, 0, -1, pawn, bodyPartRecord));
+					this.pawn.TakeDamage(new DamageInfo(DamageDefOf.Cut, 1, 0, -1, null, bodyPartRecord));
 				}
 				this.pawn.skills.Learn(SkillDefOf.Melee, 100);
 			}
