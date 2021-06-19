@@ -56,6 +56,7 @@
     <label>gatling gun turret</label>
     <description>A portable, old time turret. Needs to be manned in order to be operated. Requires steel to refurbish its barrel after heavy use. Firing speed increases the longer this turret fires. May explode when damaged.</description>
     <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Buildings/TurretGatlingGun/TurretGatlingGun_Base</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -120,11 +121,9 @@
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
       </li>
-      <li Class="VanillaFactionsExpandedSettlers.CompProperties_WarmUpReduction">
+      <li Class="Warmup.CompProperties_WarmUpReduction">
         <WarmUpReductionPerShot>0.25</WarmUpReductionPerShot>
         <UiIconPath>UI/EnableWarmup/EnableWarmup</UiIconPath>
-        <OverheatMoteThrown>Mote_HeatGlow</OverheatMoteThrown>
-        <OverheatMoteSize>0.5</OverheatMoteSize>
       </li>
     </comps>
     <passability>PassThroughOnly</passability>
