@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buildings\Building_Chemlamp.cs" />
-    <Compile Include="Buildings\Building_ChemshineBarrel.cs" />
     <Compile Include="Buildings\Building_SaloonDoor.cs" />
     <Compile Include="Comps\CompPowerPlantWindmill.cs" />
     <Compile Include="Comps\DynamiteComp.cs" />
@@ -73,15 +72,12 @@
     <Compile Include="Defs\RulePackDefOf.cs" />
     <Compile Include="Defs\SettlerEffecterDefOf.cs" />
     <Compile Include="Defs\SiteCoreDefOf.cs" />
-    <Compile Include="Defs\JobDefOf.cs" />
     <Compile Include="Defs\ThingDefOf.cs" />
     <Compile Include="GenSteps\GenStep_CaravanRaid.cs" />
     <Compile Include="GenSteps\GenStep_SpawnWanted.cs" />
     <Compile Include="Harmony\Harmony.cs" />
     <Compile Include="Hediffs\HediffComp_Wanted.cs" />
     <Compile Include="Hediffs\Hediff_Chemshined.cs" />
-    <Compile Include="JobDrivers\JobDriver_FillChemshineBarrel.cs" />
-    <Compile Include="JobDrivers\JobDriver_TakeChemshineOutOfChemshineBarrel.cs" />
     <Compile Include="JobGivers\JobGiver_Chemshined.cs" />
     <Compile Include="JobDrivers\JobDriver_PlayFiveFingerFillet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,8 +92,6 @@
     <Compile Include="Workers\IncidentWorker_CaravanRaid.cs" />
     <Compile Include="Workers\IncidentWorker_DrunkMuffalos.cs" />
     <Compile Include="Workers\IncidentWorker_ProtectionFee.cs" />
-    <Compile Include="WorkGivers\WorkGiver_FillChemshineBarrel.cs" />
-    <Compile Include="WorkGivers\WorkGiver_TakeChemshineOutOfChemshineBarrel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

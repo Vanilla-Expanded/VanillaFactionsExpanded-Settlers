@@ -1,6 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\1.1\Assemblies\VanillaFactionsExpandedSettlers.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\1.1\Assemblies\VanillaFactionsExpandedSettlers.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\Source\VanillaFactionsExpanded-Settlers\obj\Release\VanillaFactionsExpanded-Settlers.csprojAssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\Source\VanillaFactionsExpanded-Settlers\obj\Release\VanillaFactionsExpanded-Settlers.csproj.CopyComplete
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\Source\VanillaFactionsExpanded-Settlers\obj\Release\VanillaFactionsExpandedSettlers.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Vanilla-Factions-Expanded---Settlers\Source\VanillaFactionsExpanded-Settlers\obj\Release\VanillaFactionsExpandedSettlers.pdb
