@@ -8,7 +8,7 @@
       <texPath>Things/Buildings/TurretGatlingGun/TurretGatlingGun_Top</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-	<uiIconScale>2</uiIconScale>
+    <uiIconScale>2</uiIconScale>
     <statBases>
       <AccuracyTouch>0.75</AccuracyTouch>
       <AccuracyShort>0.4</AccuracyShort>
@@ -51,7 +51,7 @@
     </projectile>
   </ThingDef>
 
-<ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Turret_GatlingGun</defName>
     <label>gatling gun turret</label>
     <description>A portable, old time turret. Needs to be manned in order to be operated. Requires steel to refurbish its barrel after heavy use. Firing speed increases the longer this turret fires. May explode when damaged.</description>
@@ -115,16 +115,14 @@
         <factorByDifficulty>true</factorByDifficulty>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
         <outOfFuelMessage>Cannot shoot: Needs new barrel</outOfFuelMessage>
-        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath> 
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
       </li>
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
       </li>
-      <li Class="VanillaFactionsExpandedSettlers.CompProperties_WarmUpReduction">
-		<WarmUpReductionPerShot>0.25</WarmUpReductionPerShot>
-		<UiIconPath>UI/EnableWarmup/EnableWarmup</UiIconPath>
-		<OverheatMoteThrown>Mote_HeatGlow</OverheatMoteThrown>
-		<OverheatMoteSize>0.5</OverheatMoteSize>
+      <li Class="Warmup.CompProperties_WarmUpReduction">
+        <WarmUpReductionPerShot>0.25</WarmUpReductionPerShot>
+        <UiIconPath>UI/EnableWarmup/EnableWarmup</UiIconPath>
       </li>
     </comps>
     <passability>PassThroughOnly</passability>
@@ -151,7 +149,7 @@
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <designationHotKey>Misc2</designationHotKey>
-	    <researchPrerequisites>
+    <researchPrerequisites>
       <li>Gunsmithing</li>
     </researchPrerequisites>
   </ThingDef>
