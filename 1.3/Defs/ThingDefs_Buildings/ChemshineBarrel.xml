@@ -5,6 +5,7 @@
     <label>chemshine barrel</label>
     <description>A barrel for fermenting chemshine.</description>
     <thingClass>ItemProcessor.Building_ItemProcessor</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
       <texPath>Things/Buildings/ChemshineBarrel/ChemshineBarrel</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
