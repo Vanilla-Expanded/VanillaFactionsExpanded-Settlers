@@ -11,8 +11,24 @@
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>mayor</leaderTitle>
     <factionIconPath>World/WorldObjects/Settlement</factionIconPath>
-    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
     <techLevel>Industrial</techLevel>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures><li>Rustican</li></allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <structureMemeWeights>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+    </structureMemeWeights>
     <backstoryFilters>
       <li>
         <categories>
@@ -143,8 +159,9 @@
       <li>(0.25, 0.14, 0.54)</li>
       <li>(0.23, 0.18, 0.40)</li>
     </colorSpectrum>
+    <classicIdeo>true</classicIdeo>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
-    <configurationListOrderPriority>10</configurationListOrderPriority>
+    <configurationListOrderPriority>25</configurationListOrderPriority>
   </FactionDef>
 
   <FactionDef ParentName="SettlerFactionBase">
@@ -159,7 +176,7 @@
     </colorSpectrum>
     <naturalEnemy>true</naturalEnemy>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
-    <configurationListOrderPriority>20</configurationListOrderPriority>
+    <configurationListOrderPriority>25</configurationListOrderPriority>
   </FactionDef>
 
   <FactionDef ParentName="SettlerFactionBase">
@@ -173,7 +190,10 @@
       <li>(0.4, 0.17, 0.17)</li>
     </colorSpectrum>
     <permanentEnemy>true</permanentEnemy>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+    </requiredMemes>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
-    <configurationListOrderPriority>20</configurationListOrderPriority>
+    <configurationListOrderPriority>25</configurationListOrderPriority>
   </FactionDef>
 </Defs>
