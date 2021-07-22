@@ -13,7 +13,6 @@
     <factionIconPath>World/WorldObjects/Settlement</factionIconPath>
     <techLevel>Industrial</techLevel>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
-    <allowedCultures><li>Rustican</li></allowedCultures>
     <disallowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
@@ -155,11 +154,15 @@
     <leaderTitle>mayor</leaderTitle>
     <factionNameMaker>NamerFactionSettler</factionNameMaker>
     <description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They are more than capable of defending themselves with basic gunpowder weaponry whilst they go about their every day routine of herding cattle, drinking chemshine and hunting down bounties.\n\nThey are concerned with the practical matters of trade, trust, and survival.\n\nThis particular group holds civil behavior in high regard.</description>
+    <allowedCultures><li>VFES_Frontier</li></allowedCultures>
     <colorSpectrum>
       <li>(0.25, 0.14, 0.54)</li>
       <li>(0.23, 0.18, 0.40)</li>
     </colorSpectrum>
     <classicIdeo>true</classicIdeo>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
+    </requiredMemes>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>25</configurationListOrderPriority>
   </FactionDef>
@@ -170,14 +173,16 @@
     <factionNameMaker>NamerFactionSettler</factionNameMaker>
     <factionIconPath>World/WorldObjects/SettlementRough</factionIconPath>
     <description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They are more than capable of defending themselves with basic gunpowder weaponry whilst they go about their every day routine of herding cattle, drinking chemshine and hunting down bounties.\n\nThey are not concerned with the practical matters of trade and trust.\n\nThis particular group believes that noone is created equal, and only strength allows one to survive on the frontier.</description>
+    <allowedCultures><li>VFES_Frontier</li></allowedCultures>
     <colorSpectrum>
       <li>(0.88, 0.43, 0.23)</li>
       <li>(0.69, 0.33, 0.18)</li>
     </colorSpectrum>
+    <naturalEnemy>true</naturalEnemy>
     <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
     </requiredMemes>
-    <naturalEnemy>true</naturalEnemy>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>25</configurationListOrderPriority>
   </FactionDef>
@@ -188,12 +193,14 @@
     <factionNameMaker>NamerFactionBandits</factionNameMaker>
     <factionIconPath>World/WorldObjects/SettlementSavage</factionIconPath>
     <description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They are a loose confederation of bandit gangs who've agreed to mostly fight outsiders instead of fighting each other.\n\nBandits don't sow, they don't build, and they rarely trade. Driven by a blood-and-honor culture that values personal strength and ruthlessness, they enrich themselves by raiding and robbing their more productive neighbors.</description>
+    <allowedCultures><li>Kriminul</li></allowedCultures>
     <colorSpectrum>
       <li>(0.67, 0.23, 0.22)</li>
       <li>(0.4, 0.17, 0.17)</li>
     </colorSpectrum>
     <permanentEnemy>true</permanentEnemy>
     <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
     </requiredMemes>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
