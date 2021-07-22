@@ -14,19 +14,6 @@
   </IncidentDef>
 
   <IncidentDef>
-    <defName>DrunkMuffalos</defName>
-    <label>Drunk muffalos</label>
-    <targetTags>
-      <li>Map_PlayerHome</li>
-    </targetTags>
-    <workerClass>VFE_Settlers.Workers.IncidentWorker_DrunkMuffalos</workerClass>
-    <category>Misc</category>
-    <baseChance>0.2</baseChance>
-    <pointsScaleable>true</pointsScaleable>
-    <minRefireDays>60</minRefireDays>
-  </IncidentDef>
-
-  <IncidentDef>
     <defName>ProtectionFeeLTS</defName>
     <label>Protection fee demand</label>
     <targetTags>
@@ -37,18 +24,5 @@
     <baseChance>1</baseChance>
     <pointsScaleable>true</pointsScaleable>
     <minRefireDays>5</minRefireDays>
-  </IncidentDef>
-
-  <IncidentDef>
-    <defName>DrunkMuffalosLTS</defName>
-    <label>Drunk muffalos</label>
-    <targetTags>
-      <li>Map_PlayerHome</li>
-    </targetTags>
-    <workerClass>VFE_Settlers.Workers.IncidentWorker_DrunkMuffalos</workerClass>
-    <category>LTS</category>
-    <baseChance>0.2</baseChance>
-    <pointsScaleable>true</pointsScaleable>
-    <minRefireDays>15</minRefireDays>
   </IncidentDef>
 </Defs>
