@@ -38,4 +38,7 @@
   <VFES_removeProductText>Remove chemsine</VFES_removeProductText>
   <VFES_removeProductDesc>Remove chemsine from the chemsine barrel.</VFES_removeProductDesc>
 
+  <!-- Wanted -->
+  <VFES_Target>Bounty target</VFES_Target>
+  <VFES_TargetDesc>The bounty target {0} has been located at this outpost.</VFES_TargetDesc>
 </LanguageData>

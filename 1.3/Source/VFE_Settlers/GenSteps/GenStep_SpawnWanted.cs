@@ -48,6 +48,10 @@ namespace VFE_Settlers.GenSteps
             BaseGen.Generate();
             MapGenerator.SetVar("RectOfInterest", cellRect);
             map.lordManager.LordOf(map.mapPawns.FreeHumanlikesOfFaction(faction).First())?.AddPawn(singlePawnToSpawn);
+
+            TaggedString letterLabel = "VFES_Target".Translate();
+            TaggedString letterText = "VFES_TargetDesc".Translate(singlePawnToSpawn.NameFullColored);
+            Find.LetterStack.ReceiveLetter(letterLabel, letterText, LetterDefOf.NeutralEvent, singlePawnToSpawn);
         }
     }
 }
