@@ -12,15 +12,14 @@ namespace VFE_Settlers.JobGivers
         {
             if (this.pawn.IsHashIntervalTick(1000))
             {
-                int rand = UnityEngine.Random.Range(0, 100);
-                if (rand > 80)
+                if (this.pawn.Faction == Faction.OfPlayer && UnityEngine.Random.Range(0, 100) > 80)
                 {
                     BodyPartRecord bodyPartRecord = (from x in pawn.health.hediffSet.GetNotMissingParts(BodyPartHeight.Undefined, BodyPartDepth.Outside, BodyPartTagDefOf.ManipulationLimbDigit, null)
                                                      where !x.def.conceptual
                                                      select x).RandomElement();
                     this.pawn.TakeDamage(new DamageInfo(DamageDefOf.Cut, 1, 0, -1, null, bodyPartRecord));
                 }
-                this.pawn.skills.Learn(SkillDefOf.Melee, 100);
+                this.pawn.skills.Learn(SkillDefOf.Melee, 50);
             }
             base.WatchTickAction();
         }
