@@ -32,16 +32,18 @@ namespace VFE_Settlers.GenSteps
         {
             Faction faction = (map.ParentFaction != null && map.ParentFaction != Faction.OfPlayer) ? map.ParentFaction : Find.FactionManager.RandomEnemyFaction();
             CellRect cellRect = CellRect.CenteredOn(loc, 8, 8).ClipInsideMap(map);
-            Pawn singlePawnToSpawn = (Pawn)parms.sitePart.things.Take(parms.sitePart.things[0]);
+
+            foreach (var item in parms.sitePart.things)
+            {
+                Pawn p = item as Pawn;
+                Log.Message($"Item: {item is Pawn} - {p?.NameFullColored}");
+            }
+            Pawn singlePawnToSpawn = (Pawn)parms.sitePart.things.Take(parms.sitePart.things[0], 1);
 
             ResolveParams resolveParams2 = default;
             resolveParams2.rect = cellRect;
             resolveParams2.faction = faction;
             resolveParams2.singlePawnToSpawn = singlePawnToSpawn;
-            resolveParams2.postThingSpawn = delegate (Thing x)
-            {
-                MapGenerator.rootsToUnfog.Add(x.Position);
-            };
 
             BaseGen.globalSettings.map = map;
             BaseGen.symbolStack.Push("pawn", resolveParams2);

@@ -21,7 +21,7 @@ namespace VFE_Settlers.SitePartWorkers
             slate.Set("nickname", name.Nick);
 
             part.things = new ThingOwner<Pawn>(part, oneStackOnly: true);
-            part.things.TryAdd(pawn);
+            part.things.TryAdd(pawn, false);
             PawnRelationUtility.Notify_PawnsSeenByPlayer(Gen.YieldSingle(pawn), out _, informEvenIfSeenBefore: true, writeSeenPawnsNames: false);
         }
     }
