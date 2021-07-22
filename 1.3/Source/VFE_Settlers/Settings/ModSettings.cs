@@ -2,27 +2,17 @@
 using UnityEngine;
 using Verse;
 
-namespace VFE_Settlers.Settings
+namespace VFE_Settlers
 {
-    internal class ModSettings : Verse.ModSettings
+    internal class VFESModSettings : ModSettings
     {
-        #region Fields
-
         private static readonly int minReward = 20;
         private static readonly int maxReward = 200;
         private static readonly bool chemsined = true;
 
-        #endregion Fields
-
-        #region Properties
-
         public int MinReward = minReward;
         public int MaxReward = maxReward;
         public bool Chemsined = chemsined;
-
-        #endregion Properties
-
-        #region Methods
 
         public override void ExposeData()
         {
@@ -38,28 +28,15 @@ namespace VFE_Settlers.Settings
             MaxReward = maxReward;
             Chemsined = chemsined;
         }
-
-        #endregion Methods
     }
 
-    internal static class SettingsHelper
+    public class VFESMod : Mod
     {
-        public static ModSettings LatestVersion;
+        internal static VFESModSettings settings;
 
-        public static void Reset()
+        public VFESMod(ModContentPack content) : base(content)
         {
-            LatestVersion.Reset();
-        }
-    }
-
-    public class ModMain : Mod
-    {
-        private ModSettings settings;
-
-        public ModMain(ModContentPack content) : base(content)
-        {
-            settings = GetSettings<ModSettings>();
-            SettingsHelper.LatestVersion = settings;
+            settings = GetSettings<VFESModSettings>();
         }
 
         public override string SettingsCategory()
@@ -88,9 +65,7 @@ namespace VFE_Settlers.Settings
                 settings.MinReward = (int)Mathf.Round(list.Slider(settings.MinReward, 10, 100));
                 list.Label("MaxReward".Translate(settings.MaxReward * 100));
                 settings.MaxReward = (int)Mathf.Round(list.Slider(settings.MaxReward, settings.MinReward, 250));
-#pragma warning disable CS0618
-                list.CheckboxLabeled("Chemsined".Translate(settings.Chemsined), ref settings.Chemsined);
-#pragma warning restore CS0618
+                list.CheckboxLabeled("Chemsined".Translate(settings.Chemsined.ToString()), ref settings.Chemsined);
 
                 list.End();
                 Widgets.EndScrollView();

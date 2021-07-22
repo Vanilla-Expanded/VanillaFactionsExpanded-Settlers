@@ -1,12 +1,15 @@
 ﻿using RimWorld;
-using Verse;
-using System.Linq;
 using RimWorld.BaseGen;
+using System.Linq;
+using Verse;
 using Verse.AI.Group;
 
-namespace VFE_Settlers.Utilities {
-    public static class UtilityBase {
-        public static void GenerateStreet(Map map, TerrainDef floorDef, CellRect rect) {
+namespace VFE_Settlers.Utilities
+{
+    public static class UtilityBase
+    {
+        public static void GenerateStreet(Map map, TerrainDef floorDef, CellRect rect)
+        {
             TerrainGrid terrainGrid = map.terrainGrid;
             foreach (var cell in rect)
             {
@@ -26,9 +29,12 @@ namespace VFE_Settlers.Utilities {
         /// <param name="roadWidth">The extra added space for the road in between the settlement sides, this value is doubled on use</param>
         /// <param name="roadExtension">The extra added space before and after the road start and end</param>
         /// <param name="blocks">The number of sub division each side should have</param>
-        public static bool GenerateTown(Map map, bool horizontal, Faction faction, IntVec3 c, int settlementWidth, int settlementHeight, int roadWidth, int roadExtension, int blocks) {
-            try {
-                if (settlementWidth / blocks < 12 || settlementHeight / blocks < 12) {
+        public static bool GenerateTown(Map map, bool horizontal, Faction faction, IntVec3 c, int settlementWidth, int settlementHeight, int roadWidth, int roadExtension, int blocks)
+        {
+            try
+            {
+                if (settlementWidth / blocks < 12 || settlementHeight / blocks < 12)
+                {
                     Log.Message("Failed to generate settlement.");
                     return false;
                 }
@@ -38,11 +44,13 @@ namespace VFE_Settlers.Utilities {
                 TerrainDef rockDef = BaseGenUtility.RegionalRockTerrainDef(map.Tile, true);
                 TerrainDef dirtDef = DefDatabase<TerrainDef>.AllDefsListForReading.First(f => f.defName == "PackedDirt");
                 TerrainDef woodDef = DefDatabase<TerrainDef>.AllDefsListForReading.First(f => f.defName == "WoodPlankFloor");
-                if (Rand.Bool) {
+                if (Rand.Bool)
+                {
                     int width = settlementWidth / blocks;
                     int height = settlementHeight / 2;
                     int x = c.x - (settlementWidth / 2);
-                    for (int i = 0; i < blocks; i++) {
+                    for (int i = 0; i < blocks; i++)
+                    {
                         CellRect temp = new CellRect(x + ((width + (i == 0 ? 0 : 1)) * i), c.z - (height + roadWidth + 1), width - 1, height - 1);
                         temp.ClipInsideMap(map);
                         ResolveParams resolveParamsInner = default;
@@ -57,7 +65,8 @@ namespace VFE_Settlers.Utilities {
                         resolveParamsBridge.floorOnlyIfTerrainSupports = new bool?(!floorOnlyIfTerrainSupports.HasValue || floorOnlyIfTerrainSupports.Value);
                         BaseGen.symbolStack.Push("floor", resolveParamsBridge);
                     }
-                    for (int i = 0; i < blocks; i++) {
+                    for (int i = 0; i < blocks; i++)
+                    {
                         CellRect temp = new CellRect(x + ((width + (i == 0 ? 0 : 1)) * i), c.z + 2, width - 1, height - 1);
                         temp.ClipInsideMap(map);
                         ResolveParams resolveParamsInner = default;
@@ -76,11 +85,13 @@ namespace VFE_Settlers.Utilities {
                     rectRoad1 = new CellRect(x - (roadExtension - 2), (c.z - (roadWidth + 2)), settlementWidth + (roadExtension * 2) - 4, 2);
                     rectRoad2 = new CellRect(x - (roadExtension - 2), c.z, settlementWidth + (roadExtension * 2) - 4, 2);
                 }
-                else {
+                else
+                {
                     int width = settlementWidth / 2;
                     int height = settlementHeight / blocks;
                     int z = c.z - (settlementHeight / 2);
-                    for (int i = 0; i < blocks; i++) {
+                    for (int i = 0; i < blocks; i++)
+                    {
                         CellRect temp = new CellRect(c.x - (width + roadWidth + 1), z + ((height + (i == 0 ? 0 : 1)) * i), width - 1, height - 1);
                         //CellRect temp2 = new CellRect(c.x - (width + roadWidth + 2), (z + ((height + (i == 0 ? 0 : 1)) * i)) - 1, width, height + 1);
                         //temp.ClipInsideMap(map);
@@ -97,7 +108,8 @@ namespace VFE_Settlers.Utilities {
                         resolveParamsBridge.floorOnlyIfTerrainSupports = new bool?(!floorOnlyIfTerrainSupports.HasValue || floorOnlyIfTerrainSupports.Value);
                         BaseGen.symbolStack.Push("floor", resolveParamsBridge);
                     }
-                    for (int i = 0; i < blocks; i++) {
+                    for (int i = 0; i < blocks; i++)
+                    {
                         CellRect temp = new CellRect(c.x + 2, z + ((height + (i == 0 ? 0 : 1)) * i), width - 1, height - 1);
                         //CellRect temp2 = new CellRect(c.x + 2, (z + ((height + (i == 0 ? 0 : 1)) * i)) - 1, width , height + 1);
                         //temp.ClipInsideMap(map);
@@ -148,7 +160,8 @@ namespace VFE_Settlers.Utilities {
                 BaseGen.Generate();
                 return true;
             }
-            catch (System.Exception) {
+            catch (System.Exception)
+            {
                 Log.Message("Failed to generate settlement.");
                 return false;
             }

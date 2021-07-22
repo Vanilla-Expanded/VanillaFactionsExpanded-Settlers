@@ -5,7 +5,6 @@ namespace VFE_Settlers.Hediffs
 {
     public class Hediff_Chemshined : HediffWithComps
     {
-
         public override void Tick()
         {
             base.Tick();
@@ -32,7 +31,6 @@ namespace VFE_Settlers.Hediffs
                     this.pawn.health.RemoveHediff(this);
                 }
             }
-
         }
 
         private bool HangoverSusceptible(Pawn pawn)

@@ -7,6 +7,7 @@ namespace VFE_Settlers.Defs
     public static class RulePackDefOf
     {
         public static RulePackDef NamerWantedNickname;
+
         static RulePackDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(RulePackDefOf));

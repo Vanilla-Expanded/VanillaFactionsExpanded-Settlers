@@ -1,10 +1,8 @@
-﻿using RimWorld.BaseGen;
-using System.Collections.Generic;
-using Verse;
-using System;
-using RimWorld;
-using Verse.AI.Group;
+﻿using RimWorld;
+using RimWorld.BaseGen;
 using System.Linq;
+using Verse;
+using Verse.AI.Group;
 
 namespace VFE_Settlers.GenSteps
 {
@@ -17,6 +15,7 @@ namespace VFE_Settlers.GenSteps
                 return 383313881;
             }
         }
+
         protected override bool CanScatterAt(IntVec3 c, Map map)
         {
             return base.CanScatterAt(c, map) && c.Standable(map);

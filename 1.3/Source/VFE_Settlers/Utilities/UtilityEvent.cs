@@ -1,30 +1,27 @@
 ﻿using RimWorld;
-using Verse;
-using System.Linq;
-using System.Collections.Generic;
 using RimWorld.Planet;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using VFE_Settlers.Comps;
+using Verse;
 using VFE_Settlers.Hediffs;
-using System;
 
 namespace VFE_Settlers.Utilities
 {
     public static class UtilityEvent
     {
-
         public static bool TryFindSpawnSpot(Map map, out IntVec3 spawnSpot)
         {
             bool validator(IntVec3 c) => map.reachability.CanReachColony(c) && !c.Fogged(map);
             return CellFinder.TryFindRandomEdgeCellWith(validator, map, CellFinder.EdgeRoadChance_Neutral, out spawnSpot);
         }
+
         public static bool ProtectionFee(Map map, IncidentParms parms)
         {
-            // int fee = Rand.RangeInclusive(Settings.SettingsHelper.LatestVersion.MinReward, Settings.SettingsHelper.LatestVersion.MaxReward);
             IEnumerable<Thing> silver = UtilityThing.GetSilverInHome(map);
             int count = UtilityThing.GetAmountSilverInHome(silver);
 
-            int fee = (int) Mathf.Clamp(map.wealthWatcher.WealthTotal / 100, 50, 50000);
+            int fee = (int)Mathf.Clamp(map.wealthWatcher.WealthTotal / 100, 50, 50000);
 
             if (parms.faction == null)
             {
@@ -67,6 +64,7 @@ namespace VFE_Settlers.Utilities
             Find.Archive.Add(new ArchivedDialog(diaNodeInitial.text, "ProtectionFeeLabel".Translate()));
             return true;
         }
+
         public static bool DrunkMuffalo(Map map)
         {
             if (!TryFindSpawnSpot(map, out IntVec3 spawnSpot))
@@ -82,15 +80,17 @@ namespace VFE_Settlers.Utilities
                 muffalo.needs.SetInitialLevels();
                 Hediff dif = HediffMaker.MakeHediff(Defs.HediffDefOf.Chemshined, muffalo);
                 muffalo.health.AddHediff(dif);
-                dif.Severity = (float)Rand.RangeInclusive(50, 99)/100f;
+                dif.Severity = (float)Rand.RangeInclusive(50, 99) / 100f;
             }
             Find.LetterStack.ReceiveLetter("DrunkMuffaloTitle".Translate(), "DrunkMuffaloMessage".Translate(), LetterDefOf.NeutralEvent, muffalo);
             return true;
         }
+
         public static bool TryFindTile(out int tile)
         {
-            return TileFinder.TryFindNewSiteTile(out tile, 7, 27, false, true, -1);
+            return TileFinder.TryFindNewSiteTile(out tile, 7, 27);
         }
+
         public static bool TryFindFactions(out Faction alliedFaction, out Faction enemyFaction)
         {
             if (Find.FactionManager.AllFactions.Where((Faction x) => !x.def.hidden && !x.defeated && !x.IsPlayer && !x.HostileTo(Faction.OfPlayer) && CommonHumanlikeEnemyFactionExists(Faction.OfPlayer, x) && !AnyQuestExistsFrom(x)).TryRandomElement(out alliedFaction))
@@ -102,6 +102,7 @@ namespace VFE_Settlers.Utilities
             enemyFaction = null;
             return false;
         }
+
         public static bool AnyQuestExistsFrom(Faction faction)
         {
             List<Site> sites = Find.WorldObjects.Sites;
@@ -115,6 +116,7 @@ namespace VFE_Settlers.Utilities
             }
             return false;
         }
+
         public static Faction CommonHumanlikeEnemyFaction(Faction f1, Faction f2)
         {
             if (Find.FactionManager.AllFactions.Where((Faction x) => x != f1 && x != f2 && !x.def.hidden && x.def.humanlikeFaction && !x.defeated && x.HostileTo(f1) && x.HostileTo(f2)).TryRandomElement(out Faction result))
@@ -123,10 +125,12 @@ namespace VFE_Settlers.Utilities
             }
             return null;
         }
+
         public static bool CommonHumanlikeEnemyFactionExists(Faction f1, Faction f2)
         {
             return CommonHumanlikeEnemyFaction(f1, f2) != null;
         }
+
         public static Command CommandTurnInWanted(Caravan caravan, Pawn criminal, int reward)
         {
             Command_Action command_Action = new Command_Action
@@ -161,8 +165,7 @@ namespace VFE_Settlers.Utilities
         {
             Hediff def = pawn.health.AddHediff(Defs.HediffDefOf.Wanted);
             comp = def.TryGetComp<HediffComp_Wanted>();
-            comp.WantedBy = faction != null ? faction : Find.FactionManager.RandomNonHostileFaction();
-            int Reward = Rand.Range(Settings.SettingsHelper.LatestVersion.MinReward, Settings.SettingsHelper.LatestVersion.MaxReward);
+            comp.WantedBy = faction ?? Find.FactionManager.RandomNonHostileFaction();
             comp.Reward = isQuest ? comp.Reward * 10 : comp.Reward;
         }
     }

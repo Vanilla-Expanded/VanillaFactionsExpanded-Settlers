@@ -1,26 +1,38 @@
 ﻿using Verse;
-namespace VFE_Settlers.Comps {
-    public class DynamiteComp : Projectile_Explosive {
 
+namespace VFE_Settlers.Comps
+{
+    public class DynamiteComp : Projectile_Explosive
+    {
         private int ticksToDetonation;
-        public override void ExposeData() {
+
+        public override void ExposeData()
+        {
             base.ExposeData();
             Scribe_Values.Look(ref ticksToDetonation, "ticksToDetonation", 0);
         }
-        public override void Tick() {
+
+        public override void Tick()
+        {
             base.Tick();
-            if (ticksToDetonation != 0) {
+            if (ticksToDetonation != 0)
+            {
                 ticksToDetonation--;
-                if (ticksToDetonation <= 0) {
+                if (ticksToDetonation <= 0)
+                {
                     Explode();
                 }
             }
-            else {
+            else
+            {
                 ticksToDetonation = Rand.Range(0, 646) + 20;
             }
         }
-        protected override void Impact(Thing hitThing) {
-            if (Rand.Value < 0.25f) {
+
+        protected override void Impact(Thing hitThing)
+        {
+            if (Rand.Value < 0.25f)
+            {
                 Explode();
                 return;
             }
