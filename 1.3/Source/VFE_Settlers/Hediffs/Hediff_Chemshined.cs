@@ -10,7 +10,7 @@ namespace VFE_Settlers.Hediffs
             base.Tick();
             if (this.pawn.IsHashIntervalTick(300))
             {
-                if (this.Severity >= 0.75f && this.HangoverSusceptible(this.pawn))
+                if (this.Severity >= 0.75f)
                 {
                     Hediff hediff = this.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Hangover, false);
                     if (hediff != null)
@@ -31,11 +31,6 @@ namespace VFE_Settlers.Hediffs
                     this.pawn.health.RemoveHediff(this);
                 }
             }
-        }
-
-        private bool HangoverSusceptible(Pawn pawn)
-        {
-            return true;
         }
     }
 }

@@ -19,14 +19,6 @@ namespace VFE_Settlers.Utilities
                         outCandidates.Add(list[i]);
                     }
                 }
-                List<Thing> list2 = pawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.BuildingArtificial);
-                for (int j = 0; j < list2.Count; j++)
-                {
-                    if (list2[j].Position.InHorDistOf(near, maxDistance) && CanSmash(pawn, list2[j]))
-                    {
-                        outCandidates.Add(list2[j]);
-                    }
-                }
             }
 
             if (outCandidates.Count > 0)
@@ -36,9 +28,9 @@ namespace VFE_Settlers.Utilities
 
         public static bool CanSmash(Pawn pawn, Thing thing)
         {
-            if ((thing.def.category == ThingCategory.Plant && !thing.def.defName.ToLower().Contains("grass")) || thing.def.IsDoor)
+            if (thing.def.category == ThingCategory.Plant && !thing.def.defName.ToLower().Contains("grass"))
             {
-                return !thing.Destroyed && thing.Spawned && thing != pawn && (pawn.CanReach(thing, PathEndMode.Touch, Danger.Deadly));
+                return !thing.Destroyed && thing.Spawned && thing != pawn && pawn.CanReach(thing, PathEndMode.Touch, Danger.Deadly);
             }
             return false;
         }

@@ -65,7 +65,6 @@
     <Compile Include="Utilities\UtilityPawn.cs" />
     <Compile Include="Utilities\UtilityThing.cs" />
     <Compile Include="Workers\IncidentWorker_CaravanRaid.cs" />
-    <Compile Include="Workers\IncidentWorker_DrunkMuffalos.cs" />
     <Compile Include="Workers\IncidentWorker_ProtectionFee.cs" />
   </ItemGroup>
   <ItemGroup>

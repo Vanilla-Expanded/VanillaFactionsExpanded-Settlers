@@ -26,7 +26,7 @@ namespace VFE_Settlers.Utilities
             [HarmonyPostfix]
             public static void PostFix(Pawn __instance)
             {
-                if (!__instance.Dead && __instance.Spawned && __instance.kindDef == PawnKindDefOf.Muffalo)
+                if (!__instance.Dead && __instance.Spawned && __instance.kindDef == PawnKindDefOf.Muffalo && (__instance.Faction == Faction.OfPlayer || __instance.Faction == null))
                 {
                     bool validator(Thing t)
                     {
@@ -36,7 +36,10 @@ namespace VFE_Settlers.Utilities
                         }
                         return true;
                     }
-                    Thing thing = GenClosest.ClosestThing_Global_Reachable(__instance.Position, __instance.Map, __instance.Map.listerThings.ThingsOfDef(Defs.ThingDefOf.Chemshine), PathEndMode.OnCell, TraverseParms.For(__instance), 20f, validator);
+
+                    TraverseParms tParms = TraverseParms.For(__instance);
+
+                    Thing thing = GenClosest.ClosestThing_Global_Reachable(__instance.Position, __instance.Map, __instance.Map.listerThings.ThingsOfDef(Defs.ThingDefOf.Chemshine), PathEndMode.OnCell, tParms, 20f, validator);
                     if (thing != null && VFESMod.settings.Chemsined)
                     {
                         Job job = new Job(JobDefOf.Ingest, thing, __instance.Position);
