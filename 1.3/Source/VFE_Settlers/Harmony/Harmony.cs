@@ -26,24 +26,23 @@ namespace VFE_Settlers.Utilities
             [HarmonyPostfix]
             public static void PostFix(Pawn __instance)
             {
-                if (!__instance.Dead && __instance.Spawned && __instance.kindDef == PawnKindDefOf.Muffalo && (__instance.Faction == Faction.OfPlayer || __instance.Faction == null))
+                if (!__instance.Dead && __instance.Spawned && __instance.kindDef == PawnKindDefOf.Muffalo && (__instance.Faction == Faction.OfPlayer || __instance.Faction == null) &&
+                    !__instance.IsFighting() && !__instance.IsCaravanMember() && !__instance.IsFormingCaravan() && !__instance.roping.IsRoped)
                 {
-                    bool validator(Thing t)
+                    Map map = __instance.Map;
+
+                    List<Thing> availableChemsine = map.listerThings.ThingsOfDef(Defs.ThingDefOf.Chemshine);
+                    if (availableChemsine?.Count > 0)
                     {
-                        if (__instance.IsFighting() || __instance.IsCaravanMember() || __instance.IsFormingCaravan())
+                        Thing thing = GenClosest.ClosestThing_Global_Reachable(__instance.Position, map, availableChemsine, PathEndMode.OnCell, TraverseParms.For(__instance), 20f);
+
+                        if (thing != null && VFESMod.settings.Chemsined)
                         {
-                            return false;
+                            float nutrition = FoodUtility.GetNutrition(thing, thing.def);
+                            Job job = JobMaker.MakeJob(JobDefOf.Ingest, thing);
+                            job.count = FoodUtility.WillIngestStackCountOf(__instance, thing.def, nutrition);
+                            __instance.jobs.TryTakeOrderedJob(job);
                         }
-                        return true;
-                    }
-
-                    TraverseParms tParms = TraverseParms.For(__instance);
-
-                    Thing thing = GenClosest.ClosestThing_Global_Reachable(__instance.Position, __instance.Map, __instance.Map.listerThings.ThingsOfDef(Defs.ThingDefOf.Chemshine), PathEndMode.OnCell, tParms, 20f, validator);
-                    if (thing != null && VFESMod.settings.Chemsined)
-                    {
-                        Job job = new Job(JobDefOf.Ingest, thing, __instance.Position);
-                        __instance.jobs.TryTakeOrderedJob(job);
                     }
                 }
             }
