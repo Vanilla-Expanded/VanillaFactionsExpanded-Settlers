@@ -159,7 +159,6 @@
       <li>(0.25, 0.14, 0.54)</li>
       <li>(0.23, 0.18, 0.40)</li>
     </colorSpectrum>
-    <classicIdeo>true</classicIdeo>
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
     </requiredMemes>
