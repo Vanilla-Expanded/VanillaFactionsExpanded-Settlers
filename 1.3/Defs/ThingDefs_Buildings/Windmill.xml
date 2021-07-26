@@ -21,6 +21,7 @@
 		<uiIconPath>Things/Buildings/Windmill/Windmill_MenuIcon</uiIconPath>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
+		<drawerType>MapMeshAndRealTime</drawerType>
 		<blockWind>true</blockWind>
 		<fillPercent>0.5</fillPercent>
 		<statBases>
