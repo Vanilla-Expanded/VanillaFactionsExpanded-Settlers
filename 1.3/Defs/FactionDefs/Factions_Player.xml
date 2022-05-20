@@ -12,6 +12,7 @@
     <pawnSingular>bandit</pawnSingular>
     <pawnsPlural>bandits</pawnsPlural>
     <techLevel>Industrial</techLevel>
+    <allowedCultures><li>VFES_Frontier</li><li>Rustican</li></allowedCultures>
     <factionNameMaker>NamerFactionBandits</factionNameMaker>
     <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
     <backstoryFilters>
