@@ -16,7 +16,6 @@
     <pathCost>33</pathCost>
     <ingestible />
     <plant>
-      <fertilityMin>1.2</fertilityMin>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <growDays>25</growDays>
       <sowWork>500</sowWork>
