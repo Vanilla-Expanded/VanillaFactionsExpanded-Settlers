@@ -46,6 +46,7 @@
     </researchPrerequisites>
     <building>
       <isSittable>true</isSittable>
+	  <paintable>true</paintable>
     </building>
     <rotatable>false</rotatable>
   </ThingDef>

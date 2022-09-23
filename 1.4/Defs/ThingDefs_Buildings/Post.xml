@@ -28,6 +28,7 @@
 		<building>
 			<isInert>true</isInert>
 			<ai_chillDestination>false</ai_chillDestination>
+			<paintable>true</paintable>
 		</building>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>

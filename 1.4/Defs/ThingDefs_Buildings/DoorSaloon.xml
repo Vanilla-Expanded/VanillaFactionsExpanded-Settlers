@@ -22,11 +22,9 @@
     </graphicData>
     <uiIconPath>Things/Buildings/SaloonDoor/SaloonDoor_MenuIcon</uiIconPath>
     <costStuffCount>15</costStuffCount>
-    <!--<building>
-      <blueprintGraphicData>
-        <texPath>Things/Buildings/SaloonDoor/SaloonDoor_Mover</texPath>
-      </blueprintGraphicData>
-    </building>-->
+    <building>
+        <paintable>true</paintable>
+    </building>
   </ThingDef>
 
 </Defs>

@@ -25,6 +25,7 @@
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <building>
       <joyKind>Gaming_Cerebral</joyKind>
+	  <paintable>true</paintable>
     </building>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>

@@ -51,6 +51,7 @@
 					<rect>(0.35,0.35,0.3,0.3)</rect>
 				</damageData>
 			</fullGraveGraphicData>
+			<paintable>true</paintable>
 		</building>
 		<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>

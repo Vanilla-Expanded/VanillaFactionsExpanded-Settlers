@@ -144,6 +144,7 @@
       <ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_GatlingGun</turretGunDef>
       <turretBurstCooldownTime>3</turretBurstCooldownTime>
+	  <paintable>true</paintable>
     </building>
     <placeWorkers>
       <li>PlaceWorker_TurretTop</li>
