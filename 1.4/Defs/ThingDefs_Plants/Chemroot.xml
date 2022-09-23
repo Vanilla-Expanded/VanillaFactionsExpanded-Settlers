@@ -15,6 +15,7 @@
     <selectable>true</selectable>
     <pathCost>33</pathCost>
     <ingestible />
+	<tickerType>Normal</tickerType>
     <plant>
       <fertilitySensitivity>1.0</fertilitySensitivity>
       <growDays>12</growDays>
