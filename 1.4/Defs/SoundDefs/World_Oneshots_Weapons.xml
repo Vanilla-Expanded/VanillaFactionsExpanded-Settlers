@@ -9,7 +9,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapons/dblactionrevolver_a</clipFolderPath>
+            <clipPath>Weapons/dblactionrevolver_a</clipPath>
           </li>
         </grains>      
         <volumeRange>
@@ -30,7 +30,7 @@
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Weapons/gattlinggunshot</clipFolderPath>
+            <clipPath>Weapons/gattlinggunshot</clipPath>
           </li>
         </grains>      
         <volumeRange>
