@@ -17,7 +17,7 @@
     <ingestible />
     <plant>
       <fertilitySensitivity>1.0</fertilitySensitivity>
-      <growDays>25</growDays>
+      <growDays>12</growDays>
       <sowWork>500</sowWork>
       <dieIfLeafless>true</dieIfLeafless>
       <harvestTag>Standard</harvestTag>
