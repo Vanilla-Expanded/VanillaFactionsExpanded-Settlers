@@ -8,7 +8,7 @@
   <PawnKindDef ParentName="SettlerBase">
     <defName>Bandit</defName>
     <label>bandit</label>
-    <combatPower>35</combatPower>
+    <combatPower>45</combatPower>
     <itemQuality>Poor</itemQuality>
     <isFighter>true</isFighter>
     <gearHealthRange>
@@ -39,7 +39,7 @@
   <PawnKindDef ParentName="SettlerBase">
     <defName>BountyHunter</defName>
     <label>bounty hunter</label>
-    <combatPower>66</combatPower>
+    <combatPower>70</combatPower>
     <isFighter>true</isFighter>
     <gearHealthRange>
       <min>1</min>
@@ -69,7 +69,7 @@
   <PawnKindDef ParentName="SettlerBase">
     <defName>Outlaw</defName>
     <label>outlaw</label>
-    <combatPower>50</combatPower>
+    <combatPower>75</combatPower>
     <isFighter>true</isFighter>
     <gearHealthRange>
       <min>0.6</min>
@@ -100,7 +100,7 @@
     <defName>Gunslinger</defName>
     <label>gunslinger</label>
     <trader>true</trader>
-    <combatPower>60</combatPower>
+    <combatPower>65</combatPower>
     <isFighter>true</isFighter>
     <gearHealthRange>
       <min>1</min>
@@ -132,7 +132,7 @@
     <defName>BanditLeader</defName>
     <label>bandit leader</label>
     <labelPlural>bandit leaders</labelPlural>
-    <combatPower>75</combatPower>
+    <combatPower>120</combatPower>
     <factionLeader>true</factionLeader>
     <minGenerationAge>30</minGenerationAge>
     <isFighter>false</isFighter>

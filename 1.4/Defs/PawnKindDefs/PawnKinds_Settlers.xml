@@ -3,7 +3,7 @@
   <PawnKindDef ParentName="SettlerBase">
     <defName>Settler</defName>
     <label>settler</label>
-    <combatPower>30</combatPower>
+    <combatPower>35</combatPower>
     <itemQuality>Poor</itemQuality>
     <isFighter>false</isFighter>
     <gearHealthRange>
@@ -63,7 +63,7 @@
   <PawnKindDef ParentName="SettlerBase">
     <defName>Militia</defName>
     <label>militia</label>
-    <combatPower>50</combatPower>
+    <combatPower>70</combatPower>
     <isFighter>true</isFighter>
     <gearHealthRange>
       <min>0.6</min>
@@ -122,7 +122,7 @@
   <PawnKindDef ParentName="SettlerBase">
     <defName>Sheriff</defName>
     <label>sheriff</label>
-    <combatPower>70</combatPower>
+    <combatPower>95</combatPower>
     <minGenerationAge>30</minGenerationAge>
     <isFighter>false</isFighter>
     <gearHealthRange>
@@ -151,7 +151,7 @@
     <defName>Mayor</defName>
     <label>mayor</label>
     <labelPlural>mayors</labelPlural>
-    <combatPower>40</combatPower>
+    <combatPower>120</combatPower>
     <factionLeader>true</factionLeader>
     <minGenerationAge>30</minGenerationAge>
     <isFighter>false</isFighter>
