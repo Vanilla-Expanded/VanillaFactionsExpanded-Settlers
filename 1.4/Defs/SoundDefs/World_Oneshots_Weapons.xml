@@ -8,7 +8,7 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
+          <li Class="AudioGrain_Clip">
             <clipPath>Weapons/dblactionrevolver_a</clipPath>
           </li>
         </grains>      
@@ -29,7 +29,7 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Folder">
+          <li Class="AudioGrain_Clip">
             <clipPath>Weapons/gattlinggunshot</clipPath>
           </li>
         </grains>      
