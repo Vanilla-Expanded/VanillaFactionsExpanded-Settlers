@@ -28,7 +28,7 @@
       <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <ToxicSensitivity>-0.05</ToxicSensitivity>
+      <ToxicResistance>0.05</ToxicResistance>
       <PainShockThreshold>0.05</PainShockThreshold>
     </equippedStatOffsets>
     <thingCategories Inherit="False">
