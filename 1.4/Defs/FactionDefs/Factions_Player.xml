@@ -23,7 +23,6 @@
       </li>
     </backstoryFilters>
     <factionIconPath>World/WorldObjects/Expanding/PirateOutpost</factionIconPath>
-    <geneticVariance>1</geneticVariance>
     <startingResearchTags>
       <li>ClassicStart</li>
     </startingResearchTags>
