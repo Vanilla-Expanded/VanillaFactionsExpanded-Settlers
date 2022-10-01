@@ -1,6 +1,6 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using RimWorld;
 using RimWorld.BaseGen;
-using System.Linq;
 using Verse;
 
 namespace VFE_Settlers.GenSteps

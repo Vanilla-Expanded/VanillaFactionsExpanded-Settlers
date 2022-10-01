@@ -1,5 +1,5 @@
-﻿using RimWorld;
-using System.Linq;
+﻿using System.Linq;
+using RimWorld;
 using Verse;
 using Verse.Grammar;
 using VFE_Settlers.Hediffs;
@@ -8,18 +8,6 @@ namespace VFE_Settlers.Utilities
 {
     internal static class UtilityPawn
     {
-        public static bool GetWantedComponent(Pawn thing, out HediffComp_Wanted wanted)
-        {
-            wanted = thing.health.hediffSet.GetFirstHediffOfDef(Defs.HediffDefOf.Wanted).TryGetComp<HediffComp_Wanted>();
-            return wanted != null;
-        }
-
-        public static bool GetWantedComponent(Corpse thing, out HediffComp_Wanted wanted)
-        {
-            wanted = thing.InnerPawn.health.hediffSet.GetFirstHediffOfDef(Defs.HediffDefOf.Wanted).TryGetComp<HediffComp_Wanted>();
-            return wanted != null;
-        }
-
         public static Pawn GenerateWanted(Faction alliedFaction, Faction enemyFaction, int reward, out HediffComp_Wanted wan)
         {
             PawnKindDef result = null;
@@ -46,6 +34,18 @@ namespace VFE_Settlers.Utilities
             Find.WorldPawns.PassToWorld(newCriminal);
 
             return newCriminal;
+        }
+
+        public static bool GetWantedComponent(Pawn thing, out HediffComp_Wanted wanted)
+        {
+            wanted = thing.health.hediffSet.GetFirstHediffOfDef(Defs.HediffDefOf.Wanted).TryGetComp<HediffComp_Wanted>();
+            return wanted != null;
+        }
+
+        public static bool GetWantedComponent(Corpse thing, out HediffComp_Wanted wanted)
+        {
+            wanted = thing.InnerPawn.health.hediffSet.GetFirstHediffOfDef(Defs.HediffDefOf.Wanted).TryGetComp<HediffComp_Wanted>();
+            return wanted != null;
         }
     }
 }

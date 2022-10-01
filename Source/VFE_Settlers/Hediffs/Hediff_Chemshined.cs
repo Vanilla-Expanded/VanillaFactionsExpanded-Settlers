@@ -8,11 +8,11 @@ namespace VFE_Settlers.Hediffs
         public override void Tick()
         {
             base.Tick();
-            if (this.pawn.IsHashIntervalTick(300))
+            if (pawn.IsHashIntervalTick(300))
             {
-                if (this.Severity >= 0.75f)
+                if (Severity >= 0.75f)
                 {
-                    Hediff hediff = this.pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Hangover, false);
+                    Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.Hangover, false);
                     if (hediff != null)
                     {
                         hediff.Severity = 1f;
@@ -20,15 +20,15 @@ namespace VFE_Settlers.Hediffs
                     }
                     else
                     {
-                        hediff = HediffMaker.MakeHediff(HediffDefOf.Hangover, this.pawn, null);
+                        hediff = HediffMaker.MakeHediff(HediffDefOf.Hangover, pawn, null);
                         hediff.Severity = 1f;
-                        this.pawn.health.AddHediff(hediff, null, null, null);
+                        pawn.health.AddHediff(hediff, null, null, null);
                         return;
                     }
                 }
-                if (this.Severity < 0.05f)
+                if (Severity < 0.05f)
                 {
-                    this.pawn.health.RemoveHediff(this);
+                    pawn.health.RemoveHediff(this);
                 }
             }
         }

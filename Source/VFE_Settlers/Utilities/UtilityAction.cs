@@ -6,6 +6,15 @@ namespace VFE_Settlers.Utilities
 {
     public static class UtilityAction
     {
+        public static bool CanSmash(Pawn pawn, Thing thing)
+        {
+            if (thing.def.category == ThingCategory.Plant && !thing.def.defName.ToLower().Contains("grass"))
+            {
+                return !thing.Destroyed && thing.Spawned && thing != pawn && pawn.CanReach(thing, PathEndMode.Touch, Danger.Deadly);
+            }
+            return false;
+        }
+
         public static Thing GetDrunkenTarget(Pawn pawn, IntVec3 near, int maxDistance = 40)
         {
             List<Thing> outCandidates = new List<Thing>();
@@ -24,15 +33,6 @@ namespace VFE_Settlers.Utilities
             if (outCandidates.Count > 0)
                 return outCandidates.RandomElement();
             return null;
-        }
-
-        public static bool CanSmash(Pawn pawn, Thing thing)
-        {
-            if (thing.def.category == ThingCategory.Plant && !thing.def.defName.ToLower().Contains("grass"))
-            {
-                return !thing.Destroyed && thing.Spawned && thing != pawn && pawn.CanReach(thing, PathEndMode.Touch, Danger.Deadly);
-            }
-            return false;
         }
     }
 }

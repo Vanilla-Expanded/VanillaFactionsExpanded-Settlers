@@ -19,35 +19,6 @@ namespace VFE_Settlers.Utilities
             harmony.PatchAll();
         }
 
-        [HarmonyPatch(typeof(Pawn))]
-        [HarmonyPatch("TickRare", MethodType.Normal)]
-        public class PawnTickRare_Patch
-        {
-            [HarmonyPostfix]
-            public static void PostFix(Pawn __instance)
-            {
-                if (!__instance.Dead && __instance.Spawned && __instance.kindDef == PawnKindDefOf.Muffalo && (__instance.Faction == Faction.OfPlayer || __instance.Faction == null) &&
-                    !__instance.IsFighting() && !__instance.IsCaravanMember() && !__instance.IsFormingCaravan() && !__instance.roping.IsRoped)
-                {
-                    Map map = __instance.Map;
-
-                    List<Thing> availableChemsine = map.listerThings.ThingsOfDef(Defs.ThingDefOf.Chemshine);
-                    if (availableChemsine?.Count > 0)
-                    {
-                        Thing thing = GenClosest.ClosestThing_Global_Reachable(__instance.Position, map, availableChemsine, PathEndMode.OnCell, TraverseParms.For(__instance), 20f);
-
-                        if (thing != null && VFESMod.settings.Chemsined)
-                        {
-                            float nutrition = FoodUtility.GetNutrition(__instance, thing, thing.def);
-                            Job job = JobMaker.MakeJob(JobDefOf.Ingest, thing);
-                            job.count = FoodUtility.WillIngestStackCountOf(__instance, thing.def, nutrition);
-                            __instance.jobs.TryTakeOrderedJob(job);
-                        }
-                    }
-                }
-            }
-        }
-
         [HarmonyPatch(typeof(GenStep_Settlement))]
         [HarmonyPatch("ScatterAt", MethodType.Normal)]
         [HarmonyPriority(0)]
@@ -107,6 +78,34 @@ namespace VFE_Settlers.Utilities
             }
         }
 
+        [HarmonyPatch(typeof(Pawn))]
+        [HarmonyPatch("TickRare", MethodType.Normal)]
+        public class PawnTickRare_Patch
+        {
+            [HarmonyPostfix]
+            public static void PostFix(Pawn __instance)
+            {
+                if (!__instance.Dead && __instance.Spawned && __instance.kindDef == PawnKindDefOf.Muffalo && (__instance.Faction == Faction.OfPlayer || __instance.Faction == null) &&
+                    !__instance.IsFighting() && !__instance.IsCaravanMember() && !__instance.IsFormingCaravan() && !__instance.roping.IsRoped)
+                {
+                    Map map = __instance.Map;
+
+                    List<Thing> availableChemsine = map.listerThings.ThingsOfDef(Defs.ThingDefOf.Chemshine);
+                    if (availableChemsine?.Count > 0)
+                    {
+                        Thing thing = GenClosest.ClosestThing_Global_Reachable(__instance.Position, map, availableChemsine, PathEndMode.OnCell, TraverseParms.For(__instance), 20f);
+
+                        if (thing != null && VFESMod.settings.Chemsined)
+                        {
+                            float nutrition = FoodUtility.GetNutrition(__instance, thing, thing.def);
+                            Job job = JobMaker.MakeJob(JobDefOf.Ingest, thing);
+                            job.count = FoodUtility.WillIngestStackCountOf(__instance, thing.def, nutrition);
+                            __instance.jobs.TryTakeOrderedJob(job);
+                        }
+                    }
+                }
+            }
+        }
         [HarmonyPatch(typeof(Settlement))]
         [HarmonyPatch("GetCaravanGizmos", MethodType.Normal)]
         public class SettlementGetCaravanGizmos_Patch

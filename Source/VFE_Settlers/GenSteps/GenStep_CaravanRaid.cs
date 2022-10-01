@@ -1,6 +1,6 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using RimWorld;
 using RimWorld.BaseGen;
-using System.Linq;
 using Verse;
 using Verse.AI.Group;
 
@@ -23,8 +23,7 @@ namespace VFE_Settlers.GenSteps
 
         protected override void ScatterAt(IntVec3 loc, Map map, GenStepParams parms, int count = 1)
         {
-            CellRect rectToDefend;
-            if (!MapGenerator.TryGetVar<CellRect>("RectOfInterest", out rectToDefend))
+            if (!MapGenerator.TryGetVar<CellRect>("RectOfInterest", out CellRect rectToDefend))
             {
                 rectToDefend = CellRect.CenteredOn(map.Center, 10);
             }

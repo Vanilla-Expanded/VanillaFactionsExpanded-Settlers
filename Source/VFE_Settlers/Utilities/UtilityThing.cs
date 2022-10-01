@@ -1,12 +1,17 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using RimWorld;
 using Verse;
 
 namespace VFE_Settlers.Utilities
 {
     public static class UtilityThing
     {
+        public static int GetAmountSilverInHome(IEnumerable<Thing> silver)
+        {
+            return silver.Sum(x => x.stackCount);
+        }
+
         public static IEnumerable<Thing> GetSilverInHome(Map map)
         {
             HashSet<Thing> yieldedThings = new HashSet<Thing>();
@@ -24,11 +29,6 @@ namespace VFE_Settlers.Utilities
                     }
                 }
             }
-        }
-
-        public static int GetAmountSilverInHome(IEnumerable<Thing> silver)
-        {
-            return silver.Sum(x => x.stackCount);
         }
 
         public static void RemoveSilverFromHome(IEnumerable<Thing> silver, int debt)

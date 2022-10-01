@@ -1,6 +1,6 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using RimWorld;
 using RimWorld.Planet;
-using System.Linq;
 using Verse;
 
 namespace VFE_Settlers.Workers
@@ -9,16 +9,16 @@ namespace VFE_Settlers.Workers
     {
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            return base.CanFireNowSub(parms) && this.TryFindTile(out int num) && this.TryFindFaction(out Faction faction);
+            return base.CanFireNowSub(parms) && TryFindTile(out int num) && TryFindFaction(out Faction faction);
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
-            if (!this.TryFindFaction(out Faction faction))
+            if (!TryFindFaction(out Faction faction))
             {
                 return false;
             }
-            if (!this.TryFindTile(out int tile))
+            if (!TryFindTile(out int tile))
             {
                 return false;
             }

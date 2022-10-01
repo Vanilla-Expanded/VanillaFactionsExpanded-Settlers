@@ -4,47 +4,15 @@ using Verse;
 
 namespace VFE_Settlers
 {
-    internal class VFESModSettings : ModSettings
-    {
-        private static readonly int minReward = 20;
-        private static readonly int maxReward = 200;
-        private static readonly bool chemsined = true;
-
-        public int MinReward = minReward;
-        public int MaxReward = maxReward;
-        public bool Chemsined = chemsined;
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look(ref MinReward, "MinReward", minReward);
-            Scribe_Values.Look(ref MaxReward, "MaxReward", maxReward);
-            Scribe_Values.Look(ref Chemsined, "Chemsined", chemsined);
-        }
-
-        internal void Reset()
-        {
-            MinReward = minReward;
-            MaxReward = maxReward;
-            Chemsined = chemsined;
-        }
-    }
-
     public class VFESMod : Mod
     {
+        public static Vector2 scrollPosition = Vector2.zero;
         internal static VFESModSettings settings;
 
         public VFESMod(ModContentPack content) : base(content)
         {
             settings = GetSettings<VFESModSettings>();
         }
-
-        public override string SettingsCategory()
-        {
-            return "Vanilla Faction Expanded - Settlers";
-        }
-
-        public static Vector2 scrollPosition = Vector2.zero;
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
@@ -75,6 +43,35 @@ namespace VFE_Settlers
             {
                 Log.Message(ex.Message);
             }
+        }
+
+        public override string SettingsCategory()
+        {
+            return "Vanilla Faction Expanded - Settlers";
+        }
+    }
+
+    internal class VFESModSettings : ModSettings
+    {
+        public bool Chemsined = chemsined;
+        public int MaxReward = maxReward;
+        public int MinReward = minReward;
+        private static readonly bool chemsined = true;
+        private static readonly int maxReward = 200;
+        private static readonly int minReward = 20;
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref MinReward, "MinReward", minReward);
+            Scribe_Values.Look(ref MaxReward, "MaxReward", maxReward);
+            Scribe_Values.Look(ref Chemsined, "Chemsined", chemsined);
+        }
+
+        internal void Reset()
+        {
+            MinReward = minReward;
+            MaxReward = maxReward;
+            Chemsined = chemsined;
         }
     }
 }
