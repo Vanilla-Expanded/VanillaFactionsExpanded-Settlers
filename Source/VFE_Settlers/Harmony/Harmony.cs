@@ -15,7 +15,7 @@ namespace VFE_Settlers.Utilities
     {
         static Harmony()
         {
-            var harmony = new HarmonyLib.Harmony("limetreesnake.settlers");
+            var harmony = new HarmonyLib.Harmony("vanillafactionsexpanded.settlers");
             harmony.PatchAll();
         }
 
