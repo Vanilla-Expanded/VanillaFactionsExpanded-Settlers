@@ -29,7 +29,7 @@ namespace VFE_Settlers.Comps
             }
         }
 
-        protected override void Impact(Thing hitThing)
+        protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
             if (Rand.Value < 0.25f)
             {

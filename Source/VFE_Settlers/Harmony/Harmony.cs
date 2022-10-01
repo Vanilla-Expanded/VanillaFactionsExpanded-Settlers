@@ -1,9 +1,9 @@
-﻿using HarmonyLib;
-using RimWorld;
-using RimWorld.Planet;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using HarmonyLib;
+using RimWorld;
+using RimWorld.Planet;
 using Verse;
 using Verse.AI;
 using VFE_Settlers.Hediffs;
@@ -38,7 +38,7 @@ namespace VFE_Settlers.Utilities
 
                         if (thing != null && VFESMod.settings.Chemsined)
                         {
-                            float nutrition = FoodUtility.GetNutrition(thing, thing.def);
+                            float nutrition = FoodUtility.GetNutrition(__instance, thing, thing.def);
                             Job job = JobMaker.MakeJob(JobDefOf.Ingest, thing);
                             job.count = FoodUtility.WillIngestStackCountOf(__instance, thing.def, nutrition);
                             __instance.jobs.TryTakeOrderedJob(job);

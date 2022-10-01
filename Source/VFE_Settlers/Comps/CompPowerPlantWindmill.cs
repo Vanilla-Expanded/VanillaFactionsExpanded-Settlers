@@ -1,7 +1,7 @@
-﻿using RimWorld;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -16,27 +16,27 @@ namespace VFE_Settlers.Comps
 
         private float cachedPowerOutput;
 
-        private List<IntVec3> windPathCells = new List<IntVec3>();
+        private readonly List<IntVec3> windPathCells = new List<IntVec3>();
 
-        private List<Thing> windPathBlockedByThings = new List<Thing>();
+        private readonly List<Thing> windPathBlockedByThings = new List<Thing>();
 
-        private List<IntVec3> windPathBlockedCells = new List<IntVec3>();
+        private readonly List<IntVec3> windPathBlockedCells = new List<IntVec3>();
 
         private float spinPosition;
 
         private const float MaxUsableWindIntensity = 2f;
 
         [TweakValue("Graphics", 0f, 0.1f)]
-        private static float SpinRateFactor = 0.035f;
+        private static readonly float SpinRateFactor = 0.035f;
 
         [TweakValue("Graphics", -3f, 3f)]
-        private static float HorizontalBladeOffset = -0.0f;
+        private static readonly float HorizontalBladeOffset = -0.0f;
 
         [TweakValue("Graphics", 0f, 3f)]
-        private static float VerticalBladeOffset = 0.9f;
+        private static readonly float VerticalBladeOffset = 0.9f;
 
         [TweakValue("Graphics", 4f, 8f)]
-        private static float BladeWidth = 3.5f;
+        private static readonly float BladeWidth = 3.5f;
 
         private const float PowerReductionPercentPerObstacle = 0.2f;
 
@@ -54,12 +54,12 @@ namespace VFE_Settlers.Comps
 
         protected override float DesiredPowerOutput => cachedPowerOutput;
 
-        private float PowerPercent => base.PowerOutput / ((0f - base.Props.basePowerConsumption) * 1.5f);
+        private float PowerPercent => base.PowerOutput / ((0f - base.Props.PowerConsumption) * 1.5f);
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
-            BarSize = new Vector2((float)parent.def.size.z - 0.40f, 0.15f);
+            BarSize = new Vector2(parent.def.size.z - 0.40f, 0.15f);
             RecalculateBlockages();
             spinPosition = Rand.Range(0f, 15f);
         }
@@ -84,7 +84,7 @@ namespace VFE_Settlers.Comps
             {
                 float num = Mathf.Min(parent.Map.windManager.WindSpeed, 1.5f);
                 ticksSinceWeatherUpdate = 0;
-                cachedPowerOutput = 0f - base.Props.basePowerConsumption * num;
+                cachedPowerOutput = 0f - base.Props.PowerConsumption * num;
                 RecalculateBlockages();
                 if (windPathBlockedCells.Count > 0)
                 {
