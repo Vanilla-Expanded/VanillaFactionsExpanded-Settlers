@@ -161,6 +161,15 @@
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
     </requiredMemes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+        <Impid MayRequire="Ludeon.RimWorld.Biotech">0.05</Impid>
+        <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.1</Pigskin>
+      </xenotypeChances>
+    </xenotypeSet>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>25</configurationListOrderPriority>
   </FactionDef>
@@ -181,6 +190,14 @@
       <li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
     </requiredMemes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+        <Impid MayRequire="Ludeon.RimWorld.Biotech">0.05</Impid>
+      </xenotypeChances>
+    </xenotypeSet>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>25</configurationListOrderPriority>
   </FactionDef>
@@ -196,6 +213,14 @@
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
     </requiredMemes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+        <Impid MayRequire="Ludeon.RimWorld.Biotech">0.05</Impid>
+      </xenotypeChances>
+    </xenotypeSet>
     <colorSpectrum>
       <li>(0.67, 0.23, 0.22)</li>
       <li>(0.4, 0.17, 0.17)</li>
