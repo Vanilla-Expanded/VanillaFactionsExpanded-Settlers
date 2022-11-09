@@ -4,14 +4,12 @@
     <mods>
       <li>Vanilla Races Expanded - Saurid</li>
     </mods>
-    <match Class="PatchOperationSequence">
+    <match Class="PatchOperationAdd">
       <operations>
         <li Class="PatchOperationReplace">
           <xpath>Defs/FactionDef[defName="SettlerRough" or defName="SettlerSavage"]/xenotypeSet/xenotypeChances</xpath>
           <value>
-            <xenotypeChances>
-                <VRESaurids_Saurid MayRequire="Ludeon.RimWorld.Biotech">0.15</VRESaurids_Saurid>
-            </xenotypeChances>
+              <VRESaurids_Saurid MayRequire="Ludeon.RimWorld.Biotech">0.15</VRESaurids_Saurid>
           </value>
         </li>
       </operations>
