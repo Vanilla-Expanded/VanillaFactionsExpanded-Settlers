@@ -12,7 +12,7 @@
     <allowedPlaceTags>
       <li>OriginSpacer</li>
     </allowedPlaceTags>
-    <iconPath>World/WorldObjects/Expanding/Town</iconPath>
+    <iconPath>World/WorldObjects/SettlementRough</iconPath>
     <iconColor>(0.8, 0.8, 0.8)</iconColor>
     <thingStyleCategories>
       <li MayRequire="Ludeon.RimWorld.Ideology">
