@@ -22,6 +22,7 @@
 			</damageData>
 		</graphicData>
 		<size>(2,2)</size>
+		<uiIconScale>0.7</uiIconScale>
 		<minifiedDef>MinifiedThing</minifiedDef>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>Impassable</passability>
@@ -63,7 +64,6 @@
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
 			</li>
 			<li Class="CompProperties_Flickable"/>
-
 			<li Class="CompProperties_HeatPusher">
 				<compClass>CompHeatPusherPowered</compClass>
 				<heatPerSecond>40</heatPerSecond>
@@ -86,5 +86,5 @@
 		</comps>
 		<designationCategory>Temperature</designationCategory>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-	</ThingDef>  
+	</ThingDef>
 </Defs>

@@ -47,5 +47,4 @@
 		<rotatable>true</rotatable>
 		<uiIconPath>Things/Buildings/Post/Post_north</uiIconPath>
 	</ThingDef>
-
 </Defs>
