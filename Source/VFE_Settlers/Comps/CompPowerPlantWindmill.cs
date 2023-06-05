@@ -13,16 +13,16 @@ namespace VFE_Settlers.Comps
         public int updateWeatherEveryXTicks = 250;
 
         [TweakValue("Graphics", 4f, 8f)]
-        private static readonly float BladeWidth = 3.5f;
+        private static float BladeWidth = 3.5f;
 
         [TweakValue("Graphics", -3f, 3f)]
-        private static readonly float HorizontalBladeOffset = -0.0f;
+        private static float HorizontalBladeOffset = -0.0f;
 
         [TweakValue("Graphics", 0f, 0.1f)]
-        private static readonly float SpinRateFactor = 0.035f;
+        private static float SpinRateFactor = 0.035f;
 
         [TweakValue("Graphics", 0f, 3f)]
-        private static readonly float VerticalBladeOffset = 0.9f;
+        private static float VerticalBladeOffset = 0.9f;
 
         private static readonly Material WindTurbineBarFilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.5f, 0.475f, 0.1f));
         private static readonly Material WindTurbineBarUnfilledMat = SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.15f, 0.15f, 0.15f));
