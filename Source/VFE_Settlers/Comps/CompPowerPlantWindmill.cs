@@ -4,6 +4,7 @@ using System.Text;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using LudeonTK;
 
 namespace VFE_Settlers.Comps
 {
