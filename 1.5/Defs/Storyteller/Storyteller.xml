@@ -162,11 +162,6 @@
         <numIncidentsRange>1</numIncidentsRange>
       </li>
     </comps>
-    <modExtensions>
-      <li Class="VanillaStorytellersExpanded.StorytellerDefExtension">
-        <allowedTechLevels>Animal~Ultra</allowedTechLevels>
-      </li>
-    </modExtensions>
   </StorytellerDef>
 
 </Defs>
