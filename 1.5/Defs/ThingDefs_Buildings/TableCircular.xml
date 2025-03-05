@@ -3,7 +3,7 @@
 
 <ThingDef ParentName="TableGatherSpotBase">
     <defName>TableCircular</defName>
-    <label>Circular table</label>
+    <label>circular table</label>
 	<description>Simple, circular table that can be eaten off of.</description>
     <graphicData>
       <texPath>Things/Buildings/TableCircular/TableCircular</texPath>
