@@ -165,7 +165,7 @@ namespace VFE_Settlers.Utilities
             bool validator(IntVec3 c) => map.reachability.CanReachColony(c) && !c.Fogged(map);
             return CellFinder.TryFindRandomEdgeCellWith(validator, map, CellFinder.EdgeRoadChance_Neutral, out spawnSpot);
         }
-        public static bool TryFindTile(out int tile)
+        public static bool TryFindTile(out PlanetTile tile)
         {
             return TileFinder.TryFindNewSiteTile(out tile, 7, 27);
         }

@@ -3,9 +3,9 @@
 	<name>Vanilla Factions Expanded - Settlers</name>
 	<author>Oskar Potocki, LimeTreeSnake, Kikohi</author>
 	<supportedVersions>
-		<li>1.3</li>
 		<li>1.4</li>
-		<li>1.5</li> 
+		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
 	<packageId>OskarPotocki.VanillaFactionsExpanded.SettlersModule</packageId>
@@ -33,9 +33,6 @@ And watch out for drunk muffalos. Those beasts love chemshine!
 		</li>
 	</modDependencies>
 	<loadAfter>
-		<li>Ludeon.RimWorld</li>
-		<li>Ludeon.RimWorld.Royalty</li>
-		<li>brrainz.harmony</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
 </ModMetaData>

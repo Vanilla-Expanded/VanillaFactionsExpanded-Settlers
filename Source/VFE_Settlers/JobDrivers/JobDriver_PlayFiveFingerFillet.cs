@@ -27,7 +27,7 @@ namespace VFE_Settlers.JobGivers
             }
             watch.AddPreTickAction(delegate
             {
-                WatchTickAction();
+                WatchTickAction(1);
             });
             watch.AddFinishAction(delegate
             {
@@ -41,7 +41,7 @@ namespace VFE_Settlers.JobGivers
             yield break;
         }
 
-        protected override void WatchTickAction()
+        protected override void WatchTickAction(int delta)
         {
             if (pawn.IsHashIntervalTick(1000))
             {
@@ -54,7 +54,7 @@ namespace VFE_Settlers.JobGivers
                 }
                 pawn.skills.Learn(SkillDefOf.Melee, 50);
             }
-            base.WatchTickAction();
+            base.WatchTickAction(delta);
         }
     }
 }

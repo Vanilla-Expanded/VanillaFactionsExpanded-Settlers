@@ -12,7 +12,7 @@ namespace VFE_Settlers.Comps
             Scribe_Values.Look(ref ticksToDetonation, "ticksToDetonation", 0);
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (ticksToDetonation != 0)

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PipeSystem.ProcessDef>
+		<defName>VFES_ChemfuelToChemshine</defName>
+		<label>Ferment chemfuel into chemshine</label>
+		<description>Turns 50 chemfuel into 25 chemshine.</description>
+		<spawnOnInteractionCell>true</spawnOnInteractionCell>
+		<labelOverride>Ferment 50 chemfuel into 25 chemshine</labelOverride>
+		<priorityInBillList>0</priorityInBillList>
+		<ingredients>
+			<li>
+				<thing>Chemfuel</thing>
+				<countNeeded>50</countNeeded>
+			</li>
+		</ingredients>
+		<ticks>300000</ticks>
+		<results>
+			<li>
+				<thing>Chemshine</thing>
+				<count>25</count>
+			</li>
+		</results>
+		<temperatureRuinable>true</temperatureRuinable>
+		<minSafeTemperature>-1</minSafeTemperature>
+		<maxSafeTemperature>40</maxSafeTemperature>
+	</PipeSystem.ProcessDef>
+	
+</Defs>

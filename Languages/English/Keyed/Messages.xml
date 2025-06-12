@@ -37,6 +37,7 @@
   <VFES_cancelIngredientsDesc>Cancel bringing chemfuel to the chemsine barrel.</VFES_cancelIngredientsDesc>
   <VFES_removeProductText>Remove chemsine</VFES_removeProductText>
   <VFES_removeProductDesc>Remove chemsine from the chemsine barrel.</VFES_removeProductDesc>
+  <VFES_ChemshineBarrelNotWorking>This chemshine barrel is not working at the moment</VFES_ChemshineBarrelNotWorking>
 
   <!-- Wanted -->
   <VFES_Target>Bounty target</VFES_Target>

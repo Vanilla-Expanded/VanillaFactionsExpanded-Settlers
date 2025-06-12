@@ -9,7 +9,7 @@ namespace VFE_Settlers.Workers
     {
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            return base.CanFireNowSub(parms) && TryFindTile(out int num) && TryFindFaction(out Faction faction);
+            return base.CanFireNowSub(parms) && TryFindTile(out PlanetTile num) && TryFindFaction(out Faction faction);
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
@@ -18,7 +18,7 @@ namespace VFE_Settlers.Workers
             {
                 return false;
             }
-            if (!TryFindTile(out int tile))
+            if (!TryFindTile(out PlanetTile tile))
             {
                 return false;
             }
@@ -41,7 +41,7 @@ namespace VFE_Settlers.Workers
             return faction != null;
         }
 
-        private bool TryFindTile(out int tile)
+        private bool TryFindTile(out PlanetTile tile)
         {
             return TileFinder.TryFindNewSiteTile(out tile, 7, 27);
         }
