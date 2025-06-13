@@ -33,6 +33,9 @@
 			<Steel>10</Steel>
 			<WoodLog>30</WoodLog>
 		</costList>
+		<inspectorTabs>
+			<li>PipeSystem.ITab_Processor</li>
+		</inspectorTabs>
 		<comps>
 			<li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
 				<notWorkingKey>VFES_ChemshineBarrelNotWorking</notWorkingKey>
