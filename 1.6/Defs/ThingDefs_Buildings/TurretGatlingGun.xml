@@ -121,7 +121,7 @@
       <li Class="CompProperties_Mannable">
         <manWorkType>Violent</manWorkType>
       </li>
-      <li Class="Warmup.CompProperties_WarmUpReduction">
+      <li Class="VEF.Weapons.CompProperties_LaserCapacitor">
         <WarmUpReductionPerShot>0.25</WarmUpReductionPerShot>
         <UiIconPath>UI/EnableWarmup/EnableWarmup</UiIconPath>
       </li>
