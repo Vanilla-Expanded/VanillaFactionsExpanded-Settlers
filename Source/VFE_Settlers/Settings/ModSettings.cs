@@ -47,7 +47,7 @@ namespace VFE_Settlers
 
         public override string SettingsCategory()
         {
-            return "Vanilla Faction Expanded - Settlers";
+            return "VFE - Settlers";
         }
     }
 
