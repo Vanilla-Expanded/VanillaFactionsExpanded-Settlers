@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ScenarioDef>
+	<ScenarioDef ParentName="ScenarioBase">
 		<defName>VFES_Bandits</defName>
 		<label>Bandits</label>
 		<description>After the last job, which was meant to be the last, you and other members of your gang were forced to run without looking back. The only thing you have with you, are the things you managed to steal, extort or find along the way. Your savage ways have granted you a bad reputation, and mending relations with other factions will take a long time.\n\nNote: Since you start without any supplies and with every other faction hostile, this is a difficult scenario.</description>
@@ -14,18 +14,7 @@ Note: Since you start with high wealth every other faction hostile, this is a ve
 				<def>PlayerFaction</def>
 				<factionDef>VFES_PlayerSettlement</factionDef>
 			</playerFaction>
-			<surfaceLayer>
-				<def>SurfaceLayerFixed</def>
-				<tag>Surface</tag>
-				<layer>Surface</layer>
-				<settingsDef>Surface</settingsDef>
-				<hide>true</hide>
-				<connections>
-					<Orbit MayRequire="Ludeon.RimWorld.Odyssey">
-						<zoomMode>ZoomOut</zoomMode>
-					</Orbit>
-				</connections>
-			</surfaceLayer>
+			
 			<parts>
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 					<def>ConfigPage_ConfigureStartingPawns</def>
