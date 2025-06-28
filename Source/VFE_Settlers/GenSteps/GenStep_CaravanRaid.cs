@@ -40,7 +40,7 @@ namespace VFE_Settlers.GenSteps
             ResolveParams resolveParamsPawn = default;
             resolveParamsPawn.rect = rectToDefend;
             resolveParamsPawn.faction = faction;
-            resolveParamsPawn.singlePawnLord = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rectToDefend.CenterCell), map, null);
+            resolveParamsPawn.singlePawnLord = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rectToDefend.CenterCell, 25000), map, null);
             resolveParamsPawn.pawnGroupKindDef = faction.def.pawnGroupMakers.FirstOrDefault(x => x.kindDef.defName == "Trader").kindDef ?? PawnGroupKindDefOf.Trader;
             resolveParamsPawn.pawnGroupMakerParams = new PawnGroupMakerParms();
             resolveParamsPawn.pawnGroupMakerParams.tile = map.Tile;

@@ -141,7 +141,7 @@ namespace VFE_Settlers.Utilities
                 resolveParamsPawn.rect = rectRoad;
                 resolveParamsPawn.faction = faction;
                 TraverseParms traverseParms = TraverseParms.For(TraverseMode.PassDoors, Danger.Deadly, false);
-                resolveParamsPawn.singlePawnLord = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rectRoad.CenterCell), map, null);
+                resolveParamsPawn.singlePawnLord = LordMaker.MakeNewLord(faction, new LordJob_DefendBase(faction, rectRoad.CenterCell, 180000), map, null);
                 resolveParamsPawn.pawnGroupKindDef = faction.def.pawnGroupMakers.FirstOrDefault(x => x.kindDef.defName == "Settlement").kindDef ?? PawnGroupKindDefOf.Settlement;
                 resolveParamsPawn.pawnGroupMakerParams = new PawnGroupMakerParms();
                 resolveParamsPawn.pawnGroupMakerParams.tile = map.Tile;
